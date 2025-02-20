@@ -1,8 +1,18 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import { Button } from "@/components/ui/button";
+
+import PrimaryLayout from "@/layouts/primary-layout";
+
+import Home from "@/pages/home";
 
 function App() {
-  return <Button>Button</Button>;
+  return (
+    <Routes>
+      <Route element={<PrimaryLayout />}>
+        <Route path="/" element={<Home />} />
+      </Route>
+    </Routes>
+  );
 }
 
 export default App;
