@@ -3,7 +3,7 @@ import Map, { Marker } from "react-map-gl/mapbox";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { STATIONS } from "../data/stations.json";
 import { Trains } from "../data/trains.json";
-import TrainIcon from "../assets/icons/train.svg";
+import TrainIcon from "../assets/icons/marked-train.svg";
 import StationIcon from "../assets/icons/station.svg";
 import MarkerComponent from "./ui/marker";
 
