@@ -29,6 +29,7 @@ const MapComponent = () => {
       {stations.map((station) => (
         <MarkerComponent
           key={station.name}
+          classProps={"cursor-pointer"}
           longitude={station.longitude}
           latitude={station.latitude}
           Icon={StationIcon}
@@ -38,6 +39,7 @@ const MapComponent = () => {
       {trains.map((train) => (
         <MarkerComponent
           key={train.trainNumber}
+          classProps={"cursor-pointer"}
           longitude={train.location.longitude}
           latitude={train.location.latitude}
           Icon={TrainIcon}
