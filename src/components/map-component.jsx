@@ -1,5 +1,5 @@
-import React, { useEffect, useState, useRef } from "react";
-import Map, { Marker } from "react-map-gl/mapbox";
+import React, { useState } from "react";
+import Map from "react-map-gl/mapbox";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { STATIONS } from "../data/stations.json";
 import { Trains } from "../data/trains.json";
@@ -22,13 +22,13 @@ const MapComponent = () => {
       initialViewState={{
         latitude: 47.3471,
         longitude: 8.7178,
-        zoom: 8,
+        zoom: 9,
       }}
       style={{
         width: "100dvw",
         height: "100dvh",
       }}
-      mapStyle="mapbox://styles/mapbox/streets-v9"
+      mapStyle="mapbox://styles/mapbox/streets-v12"
     >
       {stations.map((station) => (
         <MarkerComponent
@@ -37,7 +37,7 @@ const MapComponent = () => {
           longitude={station.longitude}
           latitude={station.latitude}
           Icon={StationIcon}
-        ></MarkerComponent>
+        />
       ))}
 
       {trains.map((train) => (
@@ -48,7 +48,7 @@ const MapComponent = () => {
           latitude={train.location.latitude}
           Icon={TrainIcon}
           handleClick={handleTrainMarkerClick}
-        ></MarkerComponent>
+        />
       ))}
     </Map>
   );
