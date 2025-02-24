@@ -19,6 +19,7 @@ import { ChevronLeft } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useIsMobile } from "@/hooks/use-mobile";
 import PearlChain from "@/components/route-and-station-details/pearl-chain";
+import TrainDetails from "../route-and-station-details/train-details";
 
 const RouteSheet = ({ routesSheetOpen, setRoutesSheetOpen }) => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -370,7 +371,9 @@ const RouteDetails = ({
               <TabsContent value="pearl-chain">
                 <PearlChain data={data} />
               </TabsContent>
-              <TabsContent value="details"></TabsContent>
+              <TabsContent value="details">
+                <TrainDetails />
+              </TabsContent>
             </Tabs>
           </div>
         </div>
