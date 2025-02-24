@@ -12,13 +12,17 @@ const MapComponent = () => {
   const [stations] = useState([...STATIONS]);
   const [trains] = useState([...Trains]);
 
+  const handleTrainMarkerClick = () => {
+    console.log("marker clicked");
+  };
+
   return (
     <Map
       mapboxAccessToken={accessToken}
       initialViewState={{
-        latitude: 39.1031,
-        longitude: -84.512,
-        zoom: 7,
+        latitude: 47.3471,
+        longitude: 8.7178,
+        zoom: 8,
       }}
       style={{
         width: "100dvw",
@@ -43,6 +47,7 @@ const MapComponent = () => {
           longitude={train.location.longitude}
           latitude={train.location.latitude}
           Icon={TrainIcon}
+          handleClick={handleTrainMarkerClick}
         ></MarkerComponent>
       ))}
     </Map>
