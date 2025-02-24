@@ -63,7 +63,7 @@ function SheetContent({
         {children}
         <SheetPrimitive.Close
           className={cn(
-            "p-1 ring-offset-background focus:ring-ring data-[state=open]:bg-secondary absolute top-3.5 right-4 rounded-full focus:ring-2 focus:ring-offset-2 focus:outline-hidden disabled:pointer-events-none cursor-pointer",
+            "p-1 outline-0 ring-offset-background focus:ring-ring data-[state=open]:bg-secondary absolute top-3.5 right-4 rounded-full disabled:pointer-events-none cursor-pointer",
             closeButton === "primary" && "bg-muted",
             closeButton === "secondary" && "text-white"
           )}
