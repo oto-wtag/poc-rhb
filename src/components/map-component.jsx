@@ -1,31 +1,57 @@
 import React, { useEffect, useState, useRef } from "react";
-import mapboxgl from "mapbox-gl";
+import Map, { Marker } from "react-map-gl/mapbox";
 import "mapbox-gl/dist/mapbox-gl.css";
-
-mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN;
+import { STATIONS } from "../data/stations.json";
+import { Trains } from "../data/trains.json";
+import TrainIcon from "../assets/icons/marked-train.svg";
+import StationIcon from "../assets/icons/station.svg";
+import MarkerComponent from "./ui/marker";
 
 const MapComponent = () => {
-  const mapContainerRef = useRef(null);
-  const map = useRef(null);
-  const [lng] = useState(90.4045);
-  const [lat] = useState(23.7938);
-  const [zoom] = useState(13);
+  const accessToken = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN;
+  const [stations] = useState([...STATIONS]);
+  const [trains] = useState([...Trains]);
 
-  useEffect(() => {
-    map.current = new mapboxgl.Map({
-      container: mapContainerRef.current,
-      style: "mapbox://styles/mapbox/streets-v12",
-      center: [lng, lat],
-      zoom: zoom,
-    });
-    map.current.addControl(new mapboxgl.NavigationControl(), "top-left");
-    map.current.on("load", () => {
-      map.current.resize();
-    });
-    return () => map.current.remove();
-  }, [lat, lng, zoom]);
+  const handleTrainMarkerClick = () => {
+    console.log("marker clicked");
+  };
 
-  return <div className="h-dvh w-full" ref={mapContainerRef} />;
+  return (
+    <Map
+      mapboxAccessToken={accessToken}
+      initialViewState={{
+        latitude: 47.3471,
+        longitude: 8.7178,
+        zoom: 8,
+      }}
+      style={{
+        width: "100dvw",
+        height: "100dvh",
+      }}
+      mapStyle="mapbox://styles/mapbox/streets-v9"
+    >
+      {stations.map((station) => (
+        <MarkerComponent
+          key={station.name}
+          classProps={"cursor-pointer"}
+          longitude={station.longitude}
+          latitude={station.latitude}
+          Icon={StationIcon}
+        ></MarkerComponent>
+      ))}
+
+      {trains.map((train) => (
+        <MarkerComponent
+          key={train.trainNumber}
+          classProps={"cursor-pointer"}
+          longitude={train.location.longitude}
+          latitude={train.location.latitude}
+          Icon={TrainIcon}
+          handleClick={handleTrainMarkerClick}
+        ></MarkerComponent>
+      ))}
+    </Map>
+  );
 };
 
 export default MapComponent;
