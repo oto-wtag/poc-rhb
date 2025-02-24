@@ -30,23 +30,70 @@
       "stations": [
         {
           "name": "Zurich HB",
+          "time": "02:20",
           "latitude": 47.378177,
           "longitude": 8.540192
         },
         {
           "name": "Winterthur",
+          "time": "02:50",
           "latitude": 47.4996,
           "longitude": 8.7253
         },
         {
           "name": "Lausanne",
+          "time": "03:50",
           "latitude": 46.516,
           "longitude": 6.6328
         },
         {
           "name": "Geneva",
+          "time": "05:50",
           "latitude": 46.2044,
           "longitude": 6.1432
+        }
+      ],
+      "bogie": [
+        { "id": 1, "type": 1, "disabledAccessible": true, "canteen": false },
+        { "id": 2, "type": 1, "disabledAccessible": true, "canteen": true },
+        { "id": 3, "type": 2, "disabledAccessible": false, "canteen": false },
+        { "id": 4, "type": 2, "disabledAccessible": false, "canteen": false },
+        { "id": 5, "type": 2, "disabledAccessible": false, "canteen": false }
+      ],
+      "issues": [
+        {
+          "id": "issue_1",
+          "description": "Signal issue between Zurich and St. Gallen"
+        },
+        {
+          "id": "issue_2",
+          "description": "Jammed door on car 3"
+        },
+        {
+          "id": "issue_3",
+          "description": "Window crack on car 2 Window crack"
+        }
+      ],
+      "crew": [
+        {
+          "name": "Daniel Black",
+          "position": "Train Driver",
+          "image": "src/assets/images/crew-1.png"
+        },
+        {
+          "name": "Charlotte White",
+          "position": "Ticket Inspector",
+          "image": "src/assets/images/crew-2.png"
+        },
+        {
+          "name": "Max Green",
+          "position": "Junior Ticket Inspector",
+          "image": "src/assets/images/crew-3.png"
+        },
+        {
+          "name": "Mia Red",
+          "position": "Conductor",
+          "image": "src/assets/images/crew-1.png"
         }
       ]
     },
@@ -80,18 +127,64 @@
       "stations": [
         {
           "name": "Zurich HB",
+          "time": "03:40",
           "latitude": 47.378177,
           "longitude": 8.540192
         },
         {
           "name": "Winterthur",
+          "time": "04:45",
           "latitude": 47.4996,
           "longitude": 8.7253
         },
         {
           "name": "Basel SBB",
+          "time": "06:15",
           "latitude": 47.5475,
           "longitude": 7.589
+        }
+      ],
+      "bogie": [
+        { "id": 1, "type": 1, "disabledAccessible": true, "canteen": false },
+        { "id": 2, "type": 1, "disabledAccessible": true, "canteen": true },
+        { "id": 3, "type": 2, "disabledAccessible": true, "canteen": false },
+        { "id": 4, "type": 2, "disabledAccessible": false, "canteen": false },
+        { "id": 5, "type": 2, "disabledAccessible": false, "canteen": false }
+      ],
+      "issues": [
+        {
+          "id": "issue_1",
+          "description": "Signal issue between Zurich and St. Gallen"
+        },
+        {
+          "id": "issue_2",
+          "description": "Jammed door on car 3"
+        },
+        {
+          "id": "issue_3",
+          "description": "Window crack on car 2"
+        }
+      ],
+      "crew": [
+        {
+          "name": "Charlotte White",
+          "position": "Ticket Inspector",
+          "image": "src/assets/images/crew-2.png"
+        },
+        {
+          "name": "Daniel Black",
+          "position": "Train Driver",
+          "image": "src/assets/images/crew-1.png"
+        },
+        {
+          "name": "Max Green",
+          "position": "Junior Ticket Inspector",
+          "image": "src/assets/images/crew-3.png"
+        },
+        {
+          "name": "Mia Red",
+          "position": "Conductor",
+          "image": "src/assets/images/crew-1.png"
         }
       ]
     },
@@ -125,13 +218,58 @@
       "stations": [
         {
           "name": "Zurich HB",
+          "time": "07:40",
           "latitude": 47.378177,
           "longitude": 8.540192
         },
         {
           "name": "Luzern",
+          "time": "10:40",
           "latitude": 47.0505,
           "longitude": 8.3103
+        }
+      ],
+      "bogie": [
+        { "id": 1, "type": 1, "disabledAccessible": true, "canteen": false },
+        { "id": 2, "type": 1, "disabledAccessible": true, "canteen": true },
+        { "id": 3, "type": 2, "disabledAccessible": true, "canteen": false },
+        { "id": 4, "type": 2, "disabledAccessible": false, "canteen": false },
+        { "id": 5, "type": 2, "disabledAccessible": false, "canteen": false }
+      ],
+      "issues": [
+        {
+          "id": "issue_1",
+          "description": "Signal issue between Zurich and St. Gallen"
+        },
+        {
+          "id": "issue_2",
+          "description": "Jammed door on car 3"
+        },
+        {
+          "id": "issue_3",
+          "description": "Window crack on car 2 "
+        }
+      ],
+      "crew": [
+        {
+          "name": "Charlotte White",
+          "position": "Ticket Inspector",
+          "image": "src/assets/images/crew-2.png"
+        },
+        {
+          "name": "Daniel Black",
+          "position": "Train Driver",
+          "image": "src/assets/images/crew-1.png"
+        },
+        {
+          "name": "Max Green",
+          "position": "Junior Ticket Inspector",
+          "image": "src/assets/images/crew-3.png"
+        },
+        {
+          "name": "Mia Red",
+          "position": "Conductor",
+          "image": "src/assets/images/crew-1.png"
         }
       ]
     },
@@ -165,13 +303,54 @@
       "stations": [
         {
           "name": "Zurich HB",
+          "time": "11:40",
           "latitude": 47.378177,
           "longitude": 8.540192
         },
         {
           "name": "Lugano",
+          "time": "14:20",
           "latitude": 46.005,
           "longitude": 8.9511
+        }
+      ],
+      "bogie": [
+        { "id": 1, "type": 1, "disabledAccessible": true, "canteen": false },
+        { "id": 2, "type": 1, "disabledAccessible": false, "canteen": true },
+        { "id": 3, "type": 2, "disabledAccessible": true, "canteen": false },
+        { "id": 4, "type": 2, "disabledAccessible": false, "canteen": false },
+        { "id": 5, "type": 2, "disabledAccessible": false, "canteen": false }
+      ],
+      "issues": [
+        {
+          "id": "issue_1",
+          "description": "Signal issue between Zurich and St. Gallen"
+        },
+        {
+          "id": "issue_2",
+          "description": "Jammed door on car 3"
+        }
+      ],
+      "crew": [
+        {
+          "name": "Daniel Black",
+          "position": "Train Driver",
+          "image": "src/assets/images/crew-1.png"
+        },
+        {
+          "name": "Charlotte White",
+          "position": "Ticket Inspector",
+          "image": "src/assets/images/crew-2.png"
+        },
+        {
+          "name": "Max Green",
+          "position": "Junior Ticket Inspector",
+          "image": "src/assets/images/crew-3.png"
+        },
+        {
+          "name": "Mia Red",
+          "position": "Conductor",
+          "image": "src/assets/images/crew-1.png"
         }
       ]
     },
@@ -205,18 +384,64 @@
       "stations": [
         {
           "name": "Zurich HB",
+          "time": "12:40",
           "latitude": 47.378177,
           "longitude": 8.540192
         },
         {
           "name": "Winterthur",
+          "time": "14:05",
           "latitude": 47.4996,
           "longitude": 8.7253
         },
         {
           "name": "St. Gallen",
+          "time": "16:30",
           "latitude": 47.4239,
           "longitude": 9.3748
+        }
+      ],
+      "bogie": [
+        { "id": 1, "type": 1, "disabledAccessible": true, "canteen": false },
+        { "id": 2, "type": 1, "disabledAccessible": true, "canteen": true },
+        { "id": 3, "type": 2, "disabledAccessible": true, "canteen": false },
+        { "id": 4, "type": 2, "disabledAccessible": false, "canteen": false },
+        { "id": 5, "type": 2, "disabledAccessible": false, "canteen": false }
+      ],
+      "issues": [
+        {
+          "id": "issue_1",
+          "description": "Signal issue between Zurich and St. Gallen"
+        },
+        {
+          "id": "issue_2",
+          "description": "Jammed door on car 3"
+        },
+        {
+          "id": "issue_3",
+          "description": "Window crack on car 2"
+        }
+      ],
+      "crew": [
+        {
+          "name": "Charlotte White",
+          "position": "Ticket Inspector",
+          "image": "src/assets/images/crew-2.png"
+        },
+        {
+          "name": "Daniel Black",
+          "position": "Train Driver",
+          "image": "src/assets/images/crew-1.png"
+        },
+        {
+          "name": "Max Green",
+          "position": "Junior Ticket Inspector",
+          "image": "src/assets/images/crew-3.png"
+        },
+        {
+          "name": "Mia Red",
+          "position": "Conductor",
+          "image": "src/assets/images/crew-1.png"
         }
       ]
     }

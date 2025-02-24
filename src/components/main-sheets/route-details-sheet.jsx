@@ -139,7 +139,7 @@ const RouteDetailsSheet = ({
                   <PearlChain data={data} />
                 </TabsContent>
                 <TabsContent value="details">
-                  <TrainDetails data={data} />
+                  <TrainDetails trainInfo={data} />
                 </TabsContent>
               </Tabs>
             </div>
