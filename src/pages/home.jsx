@@ -39,10 +39,12 @@ const Home = () => {
         routesSheetOpen={routesSheetOpen}
         setRoutesSheetOpen={setRoutesSheetOpen}
       />
+
       <RouteDetailsSheet
         routeDetailsSheetOpen={routeDetailsSheetOpen}
         setRouteDetailsSheetOpen={setRouteDetailsSheetOpen}
       />
+
       <MapComponent />
     </>
   );
