@@ -33,8 +33,6 @@ const RouteSheet = ({ routesSheetOpen, setRoutesSheetOpen }) => {
     setSearchParams({});
   };
 
-  console.log(RouteData);
-
   // const dummyData = [
   //   {
   //     id: 1,
@@ -177,9 +175,10 @@ const RouteSheet = ({ routesSheetOpen, setRoutesSheetOpen }) => {
   //   },
   // ];
 
-  const handleRouteDetailsData = (train) => {
-    setRouteDetailsData(train);
-    setRoutesDetailsSheetOpen(true);
+  const handleRouteDetailsData = (route) => {
+    const currentParams = new URLSearchParams(searchParams);
+    currentParams.set("route-details", route.id);
+    setSearchParams(currentParams);
   };
 
   return (

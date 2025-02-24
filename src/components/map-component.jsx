@@ -30,9 +30,9 @@ const MapComponent = () => {
       }}
       mapStyle="mapbox://styles/mapbox/streets-v12"
     >
-      {stations.map((station) => (
+      {stations.map((station, index) => (
         <MarkerComponent
-          key={station.name}
+          key={index}
           classProps={"cursor-pointer"}
           longitude={station.longitude}
           latitude={station.latitude}
@@ -40,9 +40,9 @@ const MapComponent = () => {
         />
       ))}
 
-      {trains.map((train) => (
+      {trains.map((train, index) => (
         <MarkerComponent
-          key={train.trainNumber}
+          key={index}
           classProps={"cursor-pointer"}
           longitude={train.location.longitude}
           latitude={train.location.latitude}

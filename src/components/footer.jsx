@@ -17,10 +17,10 @@ const Footer = () => {
     { id: 4, icon: alertIcon, path: "incidents" },
     { id: 5, icon: maintenanceIcon, path: "maintenance" },
   ];
-  const currentPath = searchParams.get("r");
+  const currentPath = searchParams.get("t");
 
   const handleNavigation = (path) => {
-    setSearchParams({ r: path });
+    setSearchParams({ t: path });
   };
 
   return (
