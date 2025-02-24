@@ -235,6 +235,42 @@
       "route": ["Geneva Cornavin", "Nyon", "Lausanne"],
       "location": { "latitude": 46.2544, "longitude": 6.1434 },
       "status": "On Time"
+    },
+    {
+      "trainNumber": "IC1 1015",
+      "trainName": "InterCity 1",
+      "currentStation": "Zurich HB",
+      "nextStation": "St. Gallen",
+      "arrivalTime": "2025-02-24T00:00:00Z",
+      "departureTime": "2025-02-24T00:05:00Z",
+      "delay": 2,
+      "route": ["Zurich HB", "Winterthur", "St. Gallen"],
+      "location": { "latitude": 46.2031, "longitude": 7.8816 },
+      "status": "Delayed"
+    },
+    {
+      "trainNumber": "IC1 1500",
+      "trainName": "InterCity 1",
+      "currentStation": "Zurich HB",
+      "nextStation": "Basel SBB",
+      "arrivalTime": "2025-02-24T06:00:00Z",
+      "departureTime": "2025-02-24T06:05:00Z",
+      "delay": 0,
+      "route": ["Zurich HB", "Baden", "Aarau", "Basel SBB"],
+      "location": { "latitude": 46.227, "longitude": 7.759 },
+      "status": "On Time"
+    },
+    {
+      "trainNumber": "R 1760",
+      "trainName": "RegioExpress",
+      "currentStation": "Geneva Cornavin",
+      "nextStation": "Lausanne",
+      "arrivalTime": "2025-02-24T07:30:00Z",
+      "departureTime": "2025-02-24T07:35:00Z",
+      "delay": 0,
+      "route": ["Geneva Cornavin", "Nyon", "Lausanne"],
+      "location": { "latitude": 46.227, "longitude": 7.359 },
+      "status": "On Time"
     }
   ]
 }
