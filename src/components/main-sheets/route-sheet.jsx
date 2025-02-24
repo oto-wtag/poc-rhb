@@ -18,7 +18,7 @@ import { Separator } from "@/components/ui/separator";
 import { ChevronLeft } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useIsMobile } from "@/hooks/use-mobile";
-import Timeline from "@/components/ui/timeline";
+import PearlChain from "@/components/route-and-station-details/pearl-chain";
 
 const RouteSheet = ({ routesSheetOpen, setRoutesSheetOpen }) => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -368,13 +368,7 @@ const RouteDetails = ({
                 <TabsTrigger value="details">Details</TabsTrigger>
               </TabsList>
               <TabsContent value="pearl-chain">
-                {data.routeDetail?.map((detail, index) => (
-                  <Timeline
-                    key={index}
-                    time={detail.time}
-                    station={detail.station}
-                  />
-                ))}
+                <PearlChain data={data} />
               </TabsContent>
               <TabsContent value="details"></TabsContent>
             </Tabs>
