@@ -72,7 +72,7 @@ const RouteDetailsSheet = ({
               </div>
               <div className="flex items-center justify-between flex-1">
                 <div>
-                  <p>{data?.trainName}</p>
+                  <p>{data?.name}</p>
                   <p className="text-sm font-light text-muted-foreground">
                     Chur to Disentis/Mustér
                   </p>
@@ -90,10 +90,10 @@ const RouteDetailsSheet = ({
             </div>
             <div className="flex gap-4">
               <Button className="flex-1" variant="secondary">
-                2 incidents
+                {data.incidents.length} incidents
               </Button>
               <Button className="flex-1" variant="muted">
-                1 maintenance
+                {data.maintenance.length} maintenance
               </Button>
             </div>
             <div className="flex items-center gap-3">
@@ -116,7 +116,7 @@ const RouteDetailsSheet = ({
             <div className="">
               <div className="flex">
                 <div className="w-10">
-                  <span className="text-base text-primary">15:20</span>
+                  <span className="text-base text-primary">14:20</span>
                 </div>
 
                 <div className="relative last:after:hidden after:absolute after:top-5 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-primary">
