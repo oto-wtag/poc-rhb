@@ -1,0 +1,224 @@
+{
+  "routes": [
+    {
+      "id": "route_1",
+      "name": "Zurich to Geneva",
+      "deviations": [
+        {
+          "id": "deviation_1",
+          "description": "Track upgrade between Zurich and Lausanne",
+          "impact": "Delays expected between Zurich and Lausanne",
+          "date": "2025-03-05"
+        }
+      ],
+      "maintenance": [
+        {
+          "id": "maintenance_1",
+          "name": "Track inspection Zurich to Lausanne",
+          "scheduled": "2025-03-01",
+          "status": "planned"
+        }
+      ],
+      "incidents": [
+        {
+          "id": "incident_1",
+          "description": "Signal failure at Lausanne",
+          "date": "2025-02-20",
+          "impact": "Delays between Lausanne and Geneva"
+        }
+      ],
+      "stations": [
+        {
+          "name": "Zurich HB",
+          "latitude": 47.378177,
+          "longitude": 8.540192
+        },
+        {
+          "name": "Winterthur",
+          "latitude": 47.4996,
+          "longitude": 8.7253
+        },
+        {
+          "name": "Lausanne",
+          "latitude": 46.516,
+          "longitude": 6.6328
+        },
+        {
+          "name": "Geneva",
+          "latitude": 46.2044,
+          "longitude": 6.1432
+        }
+      ]
+    },
+    {
+      "id": "route_2",
+      "name": "Zurich to Basel",
+      "deviations": [
+        {
+          "id": "deviation_2",
+          "description": "Maintenance work near Basel SBB",
+          "impact": "Track closure near Basel SBB, alternative routes in place",
+          "date": "2025-04-15"
+        }
+      ],
+      "maintenance": [
+        {
+          "id": "maintenance_2",
+          "name": "Signal upgrade Basel SBB",
+          "scheduled": "2025-05-01",
+          "status": "planned"
+        }
+      ],
+      "incidents": [
+        {
+          "id": "incident_2",
+          "description": "Temporary platform closure at Basel SBB",
+          "date": "2025-02-22",
+          "impact": "Platform closure, alternative platforms available"
+        }
+      ],
+      "stations": [
+        {
+          "name": "Zurich HB",
+          "latitude": 47.378177,
+          "longitude": 8.540192
+        },
+        {
+          "name": "Winterthur",
+          "latitude": 47.4996,
+          "longitude": 8.7253
+        },
+        {
+          "name": "Basel SBB",
+          "latitude": 47.5475,
+          "longitude": 7.589
+        }
+      ]
+    },
+    {
+      "id": "route_3",
+      "name": "Zurich to Lucerne",
+      "deviations": [
+        {
+          "id": "deviation_3",
+          "description": "Flooding near Lucerne, delays expected",
+          "impact": "Delays between Zurich and Lucerne",
+          "date": "2025-03-10"
+        }
+      ],
+      "maintenance": [
+        {
+          "id": "maintenance_3",
+          "name": "Track reinforcement Zurich to Lucerne",
+          "scheduled": "2025-04-01",
+          "status": "planned"
+        }
+      ],
+      "incidents": [
+        {
+          "id": "incident_3",
+          "description": "Power outage near Lucerne",
+          "date": "2025-02-18",
+          "impact": "Service interruptions, buses replacing trains"
+        }
+      ],
+      "stations": [
+        {
+          "name": "Zurich HB",
+          "latitude": 47.378177,
+          "longitude": 8.540192
+        },
+        {
+          "name": "Luzern",
+          "latitude": 47.0505,
+          "longitude": 8.3103
+        }
+      ]
+    },
+    {
+      "id": "route_4",
+      "name": "Zurich to Lugano",
+      "deviations": [
+        {
+          "id": "deviation_4",
+          "description": "Roadworks causing delays near Lugano",
+          "impact": "Expect delays and alternate routes",
+          "date": "2025-04-20"
+        }
+      ],
+      "maintenance": [
+        {
+          "id": "maintenance_4",
+          "name": "Track inspection Zurich to Lugano",
+          "scheduled": "2025-04-25",
+          "status": "planned"
+        }
+      ],
+      "incidents": [
+        {
+          "id": "incident_4",
+          "description": "Temporary halt in services due to flooding near Lugano",
+          "date": "2025-02-25",
+          "impact": "Temporary train service suspension"
+        }
+      ],
+      "stations": [
+        {
+          "name": "Zurich HB",
+          "latitude": 47.378177,
+          "longitude": 8.540192
+        },
+        {
+          "name": "Lugano",
+          "latitude": 46.005,
+          "longitude": 8.9511
+        }
+      ]
+    },
+    {
+      "id": "route_5",
+      "name": "Zurich to St. Gallen",
+      "deviations": [
+        {
+          "id": "deviation_5",
+          "description": "Power maintenance work near St. Gallen",
+          "impact": "Service disruption between Zurich and St. Gallen",
+          "date": "2025-03-22"
+        }
+      ],
+      "maintenance": [
+        {
+          "id": "maintenance_5",
+          "name": "Track reinforcement Zurich to St. Gallen",
+          "scheduled": "2025-04-12",
+          "status": "planned"
+        }
+      ],
+      "incidents": [
+        {
+          "id": "incident_5",
+          "description": "Signal issue between Zurich and St. Gallen",
+          "date": "2025-02-17",
+          "impact": "Delays on the route"
+        }
+      ],
+      "stations": [
+        {
+          "name": "Zurich HB",
+          "latitude": 47.378177,
+          "longitude": 8.540192
+        },
+        {
+          "name": "Winterthur",
+          "latitude": 47.4996,
+          "longitude": 8.7253
+        },
+        {
+          "name": "St. Gallen",
+          "latitude": 47.4239,
+          "longitude": 9.3748
+        }
+      ]
+    }
+  ]
+}
