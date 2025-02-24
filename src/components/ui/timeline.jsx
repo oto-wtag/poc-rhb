@@ -10,7 +10,15 @@ const Timeline = ({ data }) => {
               <span className="text-base text-foreground">{station.time}</span>
             </div>
 
-            <div className="relative last:after:hidden after:absolute after:top-0 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-[#A9A9A9]">
+            <div
+              className={`relative ${
+                index === 0
+                  ? "last:after:hidden after:absolute after:top-0 after:-bottom-2 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-[#A9A9A9]"
+                  : data.length !== index + 1
+                  ? "last:after:hidden after:absolute after:top-2 after:-bottom-2 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-[#A9A9A9]" // Other items except last
+                  : ""
+              }`}
+            >
               <div className="relative h-6 z-10 size-7 flex justify-center items-center">
                 <div className="h-3 w-3 rounded-full border border-[#A9A9A9] bg-background" />
               </div>

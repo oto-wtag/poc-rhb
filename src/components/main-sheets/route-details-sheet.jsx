@@ -119,9 +119,9 @@ const RouteDetailsSheet = ({
                   <span className="text-base text-primary">14:20</span>
                 </div>
 
-                <div className="relative last:after:hidden after:absolute after:top-5 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-primary">
+                <div className="relative last:after:hidden after:absolute after:top-0 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-[#A9A9A9]">
                   <div className="relative h-6 z-10 size-7 flex justify-center items-center">
-                    <div className="size-2 rounded-full bg-primary"></div>
+                    <div className="h-3 w-3 rounded-full border border-[#A9A9A9] bg-background" />
                   </div>
                 </div>
 
