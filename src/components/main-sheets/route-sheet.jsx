@@ -20,6 +20,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useIsMobile } from "@/hooks/use-mobile";
 import PearlChain from "@/components/route-and-station-details/pearl-chain";
 import TrainDetails from "../route-and-station-details/train-details";
+import RouteData from "@/data/routes-data.json";
 
 const RouteSheet = ({ routesSheetOpen, setRoutesSheetOpen }) => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -32,147 +33,149 @@ const RouteSheet = ({ routesSheetOpen, setRoutesSheetOpen }) => {
     setSearchParams({});
   };
 
-  const dummyData = [
-    {
-      id: 1,
-      trainName: "AB12/123-4567",
-      deviation: true,
-      maintenance: false,
-      incident: true,
-      routeDetail: [
-        { time: "15:00", station: "Station A" },
-        { time: "15:20", station: "Station B" },
-        { time: "15:40", station: "Reichenau-Tamins" },
-      ],
-    },
-    {
-      id: 2,
-      trainName: "CD34/4567-8910",
-      deviation: false,
-      maintenance: true,
-      incident: true,
-      routeDetail: [
-        { time: "16:00", station: "Station C" },
-        { time: "16:20", station: "Reichenau-Tamins" },
-        { time: "16:40", station: "Station D" },
-        { time: "17:00", station: "Station E" },
-      ],
-    },
-    {
-      id: 3,
-      trainName: "EF56/789-1234",
-      deviation: true,
-      maintenance: false,
-      incident: true,
-      routeDetail: [
-        { time: "17:00", station: "Station F" },
-        { time: "17:20", station: "Reichenau-Tamins" },
-        { time: "17:40", station: "Station G" },
-        { time: "18:00", station: "Station H" },
-      ],
-    },
-    {
-      id: 4,
-      trainName: "GH78/2345-6789",
-      deviation: false,
-      maintenance: true,
-      incident: false,
-      routeDetail: [
-        { time: "18:00", station: "Station I" },
-        { time: "18:20", station: "Reichenau-Tamins" },
-        { time: "18:40", station: "Station J" },
-      ],
-    },
-    {
-      id: 5,
-      trainName: "IJ90/345-0123",
-      deviation: true,
-      maintenance: true,
-      incident: true,
-      routeDetail: [
-        { time: "19:00", station: "Station K" },
-        { time: "19:20", station: "Reichenau-Tamins" },
-        { time: "19:40", station: "Station L" },
-        { time: "20:00", station: "Station M" },
-        { time: "20:20", station: "Station N" },
-      ],
-    },
-    {
-      id: 6,
-      trainName: "KL12/5678-3456",
-      deviation: false,
-      maintenance: true,
-      incident: false,
-      routeDetail: [
-        { time: "20:00", station: "Station O" },
-        { time: "20:20", station: "Reichenau-Tamins" },
-        { time: "20:40", station: "Station P" },
-      ],
-    },
-    {
-      id: 7,
-      trainName: "MN34/678-9012",
-      deviation: true,
-      maintenance: false,
-      incident: true,
-      routeDetail: [
-        { time: "21:00", station: "Station Q" },
-        { time: "21:20", station: "Reichenau-Tamins" },
-        { time: "21:40", station: "Station R" },
-        { time: "22:00", station: "Station S" },
-      ],
-    },
-    {
-      id: 8,
-      trainName: "OP56/7890-1234",
-      deviation: false,
-      maintenance: true,
-      incident: false,
-      routeDetail: [
-        { time: "22:00", station: "Station T" },
-        { time: "22:20", station: "Reichenau-Tamins" },
-        { time: "22:40", station: "Station U" },
-      ],
-    },
-    {
-      id: 9,
-      trainName: "QR78/8901-2345",
-      deviation: true,
-      maintenance: false,
-      incident: true,
-      routeDetail: [
-        { time: "23:00", station: "Station V" },
-        { time: "23:20", station: "Reichenau-Tamins" },
-        { time: "23:40", station: "Station W" },
-        { time: "00:00", station: "Station X" },
-      ],
-    },
-    {
-      id: 10,
-      trainName: "ST90/1234-5678",
-      deviation: false,
-      maintenance: true,
-      incident: true,
-      routeDetail: [
-        { time: "00:00", station: "Station Y" },
-        { time: "00:20", station: "Reichenau-Tamins" },
-        { time: "00:40", station: "Station Z" },
-      ],
-    },
-    {
-      id: 11,
-      trainName: "STG4/1324-5988",
-      deviation: false,
-      maintenance: true,
-      incident: true,
-      routeDetail: [
-        { time: "01:00", station: "Station AA" },
-        { time: "01:20", station: "Reichenau-Tamins" },
-        { time: "01:40", station: "Station AB" },
-        { time: "02:00", station: "Station AC" },
-      ],
-    },
-  ];
+  console.log(RouteData);
+
+  // const dummyData = [
+  //   {
+  //     id: 1,
+  //     trainName: "AB12/123-4567",
+  //     deviation: true,
+  //     maintenance: false,
+  //     incident: true,
+  //     routeDetail: [
+  //       { time: "15:00", station: "Station A" },
+  //       { time: "15:20", station: "Station B" },
+  //       { time: "15:40", station: "Reichenau-Tamins" },
+  //     ],
+  //   },
+  //   {
+  //     id: 2,
+  //     trainName: "CD34/4567-8910",
+  //     deviation: false,
+  //     maintenance: true,
+  //     incident: true,
+  //     routeDetail: [
+  //       { time: "16:00", station: "Station C" },
+  //       { time: "16:20", station: "Reichenau-Tamins" },
+  //       { time: "16:40", station: "Station D" },
+  //       { time: "17:00", station: "Station E" },
+  //     ],
+  //   },
+  //   {
+  //     id: 3,
+  //     trainName: "EF56/789-1234",
+  //     deviation: true,
+  //     maintenance: false,
+  //     incident: true,
+  //     routeDetail: [
+  //       { time: "17:00", station: "Station F" },
+  //       { time: "17:20", station: "Reichenau-Tamins" },
+  //       { time: "17:40", station: "Station G" },
+  //       { time: "18:00", station: "Station H" },
+  //     ],
+  //   },
+  //   {
+  //     id: 4,
+  //     trainName: "GH78/2345-6789",
+  //     deviation: false,
+  //     maintenance: true,
+  //     incident: false,
+  //     routeDetail: [
+  //       { time: "18:00", station: "Station I" },
+  //       { time: "18:20", station: "Reichenau-Tamins" },
+  //       { time: "18:40", station: "Station J" },
+  //     ],
+  //   },
+  //   {
+  //     id: 5,
+  //     trainName: "IJ90/345-0123",
+  //     deviation: true,
+  //     maintenance: true,
+  //     incident: true,
+  //     routeDetail: [
+  //       { time: "19:00", station: "Station K" },
+  //       { time: "19:20", station: "Reichenau-Tamins" },
+  //       { time: "19:40", station: "Station L" },
+  //       { time: "20:00", station: "Station M" },
+  //       { time: "20:20", station: "Station N" },
+  //     ],
+  //   },
+  //   {
+  //     id: 6,
+  //     trainName: "KL12/5678-3456",
+  //     deviation: false,
+  //     maintenance: true,
+  //     incident: false,
+  //     routeDetail: [
+  //       { time: "20:00", station: "Station O" },
+  //       { time: "20:20", station: "Reichenau-Tamins" },
+  //       { time: "20:40", station: "Station P" },
+  //     ],
+  //   },
+  //   {
+  //     id: 7,
+  //     trainName: "MN34/678-9012",
+  //     deviation: true,
+  //     maintenance: false,
+  //     incident: true,
+  //     routeDetail: [
+  //       { time: "21:00", station: "Station Q" },
+  //       { time: "21:20", station: "Reichenau-Tamins" },
+  //       { time: "21:40", station: "Station R" },
+  //       { time: "22:00", station: "Station S" },
+  //     ],
+  //   },
+  //   {
+  //     id: 8,
+  //     trainName: "OP56/7890-1234",
+  //     deviation: false,
+  //     maintenance: true,
+  //     incident: false,
+  //     routeDetail: [
+  //       { time: "22:00", station: "Station T" },
+  //       { time: "22:20", station: "Reichenau-Tamins" },
+  //       { time: "22:40", station: "Station U" },
+  //     ],
+  //   },
+  //   {
+  //     id: 9,
+  //     trainName: "QR78/8901-2345",
+  //     deviation: true,
+  //     maintenance: false,
+  //     incident: true,
+  //     routeDetail: [
+  //       { time: "23:00", station: "Station V" },
+  //       { time: "23:20", station: "Reichenau-Tamins" },
+  //       { time: "23:40", station: "Station W" },
+  //       { time: "00:00", station: "Station X" },
+  //     ],
+  //   },
+  //   {
+  //     id: 10,
+  //     trainName: "ST90/1234-5678",
+  //     deviation: false,
+  //     maintenance: true,
+  //     incident: true,
+  //     routeDetail: [
+  //       { time: "00:00", station: "Station Y" },
+  //       { time: "00:20", station: "Reichenau-Tamins" },
+  //       { time: "00:40", station: "Station Z" },
+  //     ],
+  //   },
+  //   {
+  //     id: 11,
+  //     trainName: "STG4/1324-5988",
+  //     deviation: false,
+  //     maintenance: true,
+  //     incident: true,
+  //     routeDetail: [
+  //       { time: "01:00", station: "Station AA" },
+  //       { time: "01:20", station: "Reichenau-Tamins" },
+  //       { time: "01:40", station: "Station AB" },
+  //       { time: "02:00", station: "Station AC" },
+  //     ],
+  //   },
+  // ];
 
   const handleRouteDetailsData = (train) => {
     setRouteDetailsData(train);
@@ -213,11 +216,11 @@ const RouteSheet = ({ routesSheetOpen, setRoutesSheetOpen }) => {
         </ScrollArea>
         <ScrollArea className="h-[calc(100dvh-320px)] whitespace-nowrap overflow-hidden">
           <div className="px-4 space-y-3">
-            {dummyData.map((train, index) => (
-              <React.Fragment key={train.id}>
+            {RouteData.routes.map((route, index) => (
+              <React.Fragment key={route.id}>
                 <div
                   className="flex items-center gap-3 cursor-pointer"
-                  onClick={() => handleRouteDetailsData(train)}
+                  onClick={() => handleRouteDetailsData(route)}
                 >
                   <div className="border rounded-md p-2">
                     <svg
@@ -234,18 +237,18 @@ const RouteSheet = ({ routesSheetOpen, setRoutesSheetOpen }) => {
                     </svg>
                   </div>
                   <div className="flex items-center justify-between flex-1">
-                    <p>{train.trainName}</p>
+                    <p>{route.name}</p>
                     <div className="flex items-center gap-2">
-                      {train.incident && (
+                      {route.incidents?.length > 0 && (
                         <TriangleAlert size={18} className="text-amber-400" />
                       )}
-                      {train.maintenance && (
+                      {route.maintenance?.length > 0 && (
                         <Wrench size={18} className="text-muted-foreground" />
                       )}
                     </div>
                   </div>
                 </div>
-                {index !== dummyData.length - 1 && <Separator />}
+                {index !== route.length - 1 && <Separator />}
               </React.Fragment>
             ))}
           </div>
