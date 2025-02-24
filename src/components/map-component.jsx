@@ -6,14 +6,18 @@ import { Trains } from "../data/trains.json";
 import TrainIcon from "../assets/icons/marked-train.svg";
 import StationIcon from "../assets/icons/station.svg";
 import MarkerComponent from "./ui/marker";
+import { useSearchParams } from "react-router-dom";
 
 const MapComponent = () => {
   const accessToken = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN;
   const [stations] = useState([...STATIONS]);
   const [trains] = useState([...Trains]);
+  const [searchParams, setSearchParams] = useSearchParams();
 
-  const handleTrainMarkerClick = () => {
-    console.log("marker clicked");
+  const handleTrainMarkerClick = (route) => {
+    const currentParams = new URLSearchParams(searchParams);
+    currentParams.set("route-details", route.id);
+    setSearchParams(currentParams);
   };
 
   return (
@@ -47,7 +51,7 @@ const MapComponent = () => {
           longitude={train.location.longitude}
           latitude={train.location.latitude}
           Icon={TrainIcon}
-          handleClick={handleTrainMarkerClick}
+          handleClick={() => handleTrainMarkerClick(train)}
         />
       ))}
     </Map>

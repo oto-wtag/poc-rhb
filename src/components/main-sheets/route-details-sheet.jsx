@@ -28,9 +28,6 @@ const RouteDetailsSheet = ({
     setRouteDetailsSheetOpen(false);
 
     const updatedParams = new URLSearchParams(searchParams);
-    if (!updatedParams.has("t")) {
-      updatedParams.set("t", "routes");
-    }
     updatedParams.delete("route-details");
     setSearchParams(updatedParams);
   };
