@@ -4,8 +4,12 @@ import DisabledIcon from "@/assets/icons/wheel-chair.svg";
 import DiningIcon from "@/assets/icons/canteen.svg";
 import { ScrollArea } from "../ui/scroll-area";
 import IssueIcon from "@/assets/icons/issue-icon.svg";
+import Crew1 from "@/assets/images/crew-1.png";
+import Crew2 from "@/assets/images/crew-2.png";
+import Crew3 from "@/assets/images/crew-3.png";
 
 const TrainDetails = ({ trainInfo }) => {
+  const imageArray = [Crew1, Crew2, Crew3];
   return (
     <div className="flex justify-center flex-column">
       <ScrollArea className="h-[calc(100dvh-460px)] whitespace-nowrap ">
@@ -67,12 +71,12 @@ const TrainDetails = ({ trainInfo }) => {
           </h3>
 
           <div>
-            {trainInfo?.crew?.map((crewMember) => (
+            {trainInfo?.crew?.map((crewMember, index) => (
               <div className="flex justify-start items-center gap-2 my-2">
                 <div className="w-[40px] h-[40px] rounded-lg">
                   <img
                     className="w-full h-full rounded-lg"
-                    src={crewMember.image}
+                    src={index <= 2 ? imageArray[index] : imageArray[0]}
                     alt="Crew"
                   />
                 </div>
