@@ -53,7 +53,7 @@ const IncidentDetails = ({
         <SheetHeader>
           <div className="flex items-center gap-2">
             <ChevronLeft className="cursor-pointer" onClick={closeSheet} />
-            <SheetTitle className="font-semibold font-semibold text-[20px] leading-[20px] tracking-[0px]">
+            <SheetTitle className="font-semibold text-[20px] leading-[20px] tracking-[0px]">
               Incident details
             </SheetTitle>
           </div>
