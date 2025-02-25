@@ -5,6 +5,7 @@ import { useSearchParams } from "react-router-dom";
 import RouteSheet from "@/components/main-sheets/route-sheet";
 import RouteDetailsSheet from "@/components/main-sheets/route-details-sheet";
 import StationSheet from "@/components/main-sheets/station-sheet";
+import StationDetailsSheet from "@/components/main-sheets/station-details-sheet";
 import IncidentsSheet from "@/components/main-sheets/incidents-sheet";
 import MaintenanceSheet from "@/components/main-sheets/maintenance-sheet";
 
@@ -12,12 +13,14 @@ const Home = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const currentRoute = searchParams.get("t");
   const routeDetails = searchParams.get("route-details");
+  const stationDetails = searchParams.get("station");
 
   const [routesSheetOpen, setRoutesSheetOpen] = useState(false);
   const [stationsSheetOpen, setStationsSheetOpen] = useState(false);
   const [incidentsSheetOpen, setIncidentsSheetOpen] = useState(false);
   const [maintenanceSheetOpen, setMaintenanceSheetOpen] = useState(false);
   const [routeDetailsSheetOpen, setRouteDetailsSheetOpen] = useState(false);
+  const [stationDetailsSheetOpen, setStationDetailsSheetOpen] = useState(false);
 
   useEffect(() => {
     const setSheets = () => {
@@ -53,9 +56,15 @@ const Home = () => {
       } else {
         setRouteDetailsSheetOpen(false);
       }
+
+      if (stationDetails) {
+        setStationDetailsSheetOpen(true);
+      } else {
+        setStationDetailsSheetOpen(false);
+      }
     };
     setSheets();
-  }, [currentRoute, routeDetails]);
+  }, [currentRoute, routeDetails, stationDetails]);
 
   return (
     <>
@@ -72,6 +81,11 @@ const Home = () => {
       <StationSheet
         stationsSheetOpen={stationsSheetOpen}
         setStationsSheetOpen={setStationsSheetOpen}
+      />
+
+      <StationDetailsSheet
+        stationDetailsSheetOpen={stationDetailsSheetOpen}
+        setStationDetailsSheetOpen={setStationDetailsSheetOpen}
       />
 
       <IncidentsSheet

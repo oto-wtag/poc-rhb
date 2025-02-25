@@ -8,12 +8,9 @@ import {
 } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 import { Input } from "@/components/ui/input";
-import { Search } from "lucide-react";
-import { SlidersHorizontal } from "lucide-react";
+import { Search, TriangleAlert, SlidersHorizontal, Wrench } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
-import { TriangleAlert } from "lucide-react";
-import { Wrench } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { useIsMobile } from "@/hooks/use-mobile";
 import RouteData from "@/data/routes-data.json";
@@ -103,7 +100,7 @@ const RouteSheet = ({ routesSheetOpen, setRoutesSheetOpen }) => {
                     </div>
                   </div>
                 </div>
-                {index !== route.length - 1 && <Separator />}
+                {index !== RouteData.routes.length - 1 && <Separator />}
               </React.Fragment>
             ))}
           </div>

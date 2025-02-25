@@ -15,9 +15,13 @@ const MapComponent = () => {
   const [searchParams, setSearchParams] = useSearchParams();
 
   const handleTrainMarkerClick = (route) => {
-    const currentParams = new URLSearchParams(searchParams);
-    currentParams.set("route-details", route.id);
-    setSearchParams(currentParams);
+    setSearchParams({});
+    setSearchParams({ "route-details": route.id });
+  };
+
+  const handleStationMarkerClick = (station) => {
+    setSearchParams({});
+    setSearchParams({ station: station.name });
   };
 
   return (
@@ -41,6 +45,7 @@ const MapComponent = () => {
           longitude={station.longitude}
           latitude={station.latitude}
           Icon={StationIcon}
+          handleClick={() => handleStationMarkerClick(station)}
         />
       ))}
 
