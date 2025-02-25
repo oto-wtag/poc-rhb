@@ -93,7 +93,7 @@ const IncidentsSheet = ({ incidentsSheetOpen, setIncidentsSheetOpen }) => {
                       <span className="text-wrap">{incident.subtitle}</span>
                     </p>
                     <div className="mt-[8px] font-semibold text-[13px] leading-[19.5px] tracking-[0px]">
-                      Today <span> {incident.time.from}</span> :{" "}
+                      Today <span> {incident.time.from}</span> -
                       <span> {incident.time.to} </span>
                       <span>({getFormattedDate()})</span>
                     </div>
