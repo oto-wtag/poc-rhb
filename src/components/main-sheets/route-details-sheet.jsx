@@ -36,7 +36,11 @@ const RouteDetailsSheet = ({
   const data = RouteData.routes.find((route) => route.id === routeDetailsId);
 
   return (
-    <Sheet open={routeDetailsSheetOpen} onOpenChange={closeSheet} modal={false}>
+    <Sheet
+      open={routeDetailsSheetOpen}
+      onOpenChange={closeSheet}
+      modal={isMobile}
+    >
       <SheetContent
         side={isMobile ? "bottom" : "left"}
         onInteractOutside={(event) => event.preventDefault()}

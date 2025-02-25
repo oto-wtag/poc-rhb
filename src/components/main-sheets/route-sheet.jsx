@@ -34,7 +34,7 @@ const RouteSheet = ({ routesSheetOpen, setRoutesSheetOpen }) => {
   };
 
   return (
-    <Sheet open={routesSheetOpen} onOpenChange={closeSheet} modal={false}>
+    <Sheet open={routesSheetOpen} onOpenChange={closeSheet} modal={isMobile}>
       <SheetContent
         side={isMobile ? "bottom" : "left"}
         onInteractOutside={(event) => event.preventDefault()}
