@@ -9,6 +9,7 @@ import MarkerComponent from "./ui/marker";
 import { useSearchParams } from "react-router-dom";
 import { INCIDENTS } from "@/data/incident-data.json";
 import IncidentMarkerIcon from "@/assets/icons/incident-marker-icon.svg";
+import StationData from "@/data/stations-data.json";
 
 const MapComponent = () => {
   const accessToken = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN;
@@ -24,8 +25,9 @@ const MapComponent = () => {
 
   const handleStationMarkerClick = (station) => {
     setSearchParams({});
-    setSearchParams({ station: station.name });
+    setSearchParams({ station: station.name.toLowerCase() });
   };
+
   const handleIncidentMarkerClick = (incident) => {
     setSearchParams({});
     setSearchParams({ "incident-details": incident.id });
@@ -45,7 +47,7 @@ const MapComponent = () => {
       }}
       mapStyle="mapbox://styles/mapbox/streets-v12"
     >
-      {stations.map((station, index) => (
+      {StationData.stations.map((station, index) => (
         <MarkerComponent
           key={index}
           classProps={"cursor-pointer"}
