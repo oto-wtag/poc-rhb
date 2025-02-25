@@ -24,8 +24,8 @@ const Footer = () => {
   };
 
   return (
-    <div className="fixed bottom-0 left-0 w-full h-16 bg-white z-50 flex justify-center shadow">
-      <div className="max-w-4xl w-full h-full flex justify-between items-center px-10">
+    <div className="fixed bottom-0 left-0 w-full h-16 bg-white z-[999] flex justify-center shadow">
+      <div className="max-w-4xl w-full h-full flex justify-between items-center mx-2">
         {footerMenu.map((item) => (
           <div
             key={item.id}
