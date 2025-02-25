@@ -22,6 +22,11 @@ const MapComponent = () => {
     currentParams.set("route-details", route.id);
     setSearchParams(currentParams);
   };
+  const handleIncidentMarkerClick = (incident) => {
+    const currentParams = new URLSearchParams(searchParams);
+    currentParams.set("incident-details", incident.id);
+    setSearchParams(currentParams);
+  };
 
   return (
     <Map
@@ -65,6 +70,7 @@ const MapComponent = () => {
           longitude={incident.location.longitude}
           latitude={incident.location.latitude}
           Icon={IncidentMarkerIcon}
+          handleClick={() => handleIncidentMarkerClick(incident)}
         />
       ))}
     </Map>
