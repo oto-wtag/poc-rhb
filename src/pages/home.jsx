@@ -4,6 +4,9 @@ import { useSearchParams } from "react-router-dom";
 
 import RouteSheet from "@/components/main-sheets/route-sheet";
 import RouteDetailsSheet from "@/components/main-sheets/route-details-sheet";
+import StationSheet from "@/components/main-sheets/station-sheet";
+import IncidentsSheet from "@/components/main-sheets/incidents-sheet";
+import MaintenanceSheet from "@/components/main-sheets/maintenance-sheet";
 
 const Home = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -20,8 +23,29 @@ const Home = () => {
     const setSheets = () => {
       if (currentRoute === "routes") {
         setRoutesSheetOpen(true);
+        setStationsSheetOpen(false);
+        setIncidentsSheetOpen(false);
+        setMaintenanceSheetOpen(false);
+      } else if (currentRoute === "stations") {
+        setRoutesSheetOpen(false);
+        setStationsSheetOpen(true);
+        setIncidentsSheetOpen(false);
+        setMaintenanceSheetOpen(false);
+      } else if (currentRoute === "incidents") {
+        setRoutesSheetOpen(false);
+        setStationsSheetOpen(false);
+        setIncidentsSheetOpen(true);
+        setMaintenanceSheetOpen(false);
+      } else if (currentRoute === "maintenance") {
+        setRoutesSheetOpen(false);
+        setStationsSheetOpen(false);
+        setIncidentsSheetOpen(false);
+        setMaintenanceSheetOpen(true);
       } else {
         setRoutesSheetOpen(false);
+        setStationsSheetOpen(false);
+        setIncidentsSheetOpen(false);
+        setMaintenanceSheetOpen(false);
       }
 
       if (routeDetails) {
@@ -43,6 +67,21 @@ const Home = () => {
       <RouteDetailsSheet
         routeDetailsSheetOpen={routeDetailsSheetOpen}
         setRouteDetailsSheetOpen={setRouteDetailsSheetOpen}
+      />
+
+      <StationSheet
+        stationsSheetOpen={stationsSheetOpen}
+        setStationsSheetOpen={setStationsSheetOpen}
+      />
+
+      <IncidentsSheet
+        incidentsSheetOpen={incidentsSheetOpen}
+        setIncidentsSheetOpen={setIncidentsSheetOpen}
+      />
+
+      <MaintenanceSheet
+        maintenanceSheetOpen={maintenanceSheetOpen}
+        setMaintenanceSheetOpen={setMaintenanceSheetOpen}
       />
 
       <MapComponent />

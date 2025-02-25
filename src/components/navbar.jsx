@@ -70,7 +70,7 @@ const Navbar = () => {
             </SheetTrigger>
             <SheetContent
               closeButton="secondary"
-              className={cn("!w-[400px] !sm:max-w-[400px]")}
+              className={cn("!sm:max-w-[400px]")}
             >
               <SheetHeader className={cn("bg-primary")}>
                 <SheetTitle className={cn("text-white")}>Menu</SheetTitle>
