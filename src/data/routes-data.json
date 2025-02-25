@@ -78,22 +78,22 @@
         {
           "name": "Daniel Black",
           "position": "Train Driver",
-          "image": "./src/assets/images/crew-1.png"
+          "image": "/assets/images/crew-1.png"
         },
         {
           "name": "Charlotte White",
           "position": "Ticket Inspector",
-          "image": "./src/assets/images/crew-2.png"
+          "image": "/assets/images/crew-2.png"
         },
         {
           "name": "Max Green",
           "position": "Junior Ticket Inspector",
-          "image": "./src/assets/images/crew-3.png"
+          "image": "/assets/images/crew-3.png"
         },
         {
           "name": "Mia Red",
           "position": "Conductor",
-          "image": "./src/assets/images/crew-1.png"
+          "image": "/assets/images/crew-1.png"
         }
       ]
     },
@@ -169,22 +169,22 @@
         {
           "name": "Charlotte White",
           "position": "Ticket Inspector",
-          "image": "./src/assets/images/crew-2.png"
+          "image": "/assets/images/crew-2.png"
         },
         {
           "name": "Daniel Black",
           "position": "Train Driver",
-          "image": "./src/assets/images/crew-1.png"
+          "image": "/assets/images/crew-1.png"
         },
         {
           "name": "Max Green",
           "position": "Junior Ticket Inspector",
-          "image": "./src/assets/images/crew-3.png"
+          "image": "/assets/images/crew-3.png"
         },
         {
           "name": "Mia Red",
           "position": "Conductor",
-          "image": "./src/assets/images/crew-1.png"
+          "image": "/assets/images/crew-1.png"
         }
       ]
     },
@@ -254,22 +254,22 @@
         {
           "name": "Charlotte White",
           "position": "Ticket Inspector",
-          "image": "./src/assets/images/crew-2.png"
+          "image": "/assets/images/crew-2.png"
         },
         {
           "name": "Daniel Black",
           "position": "Train Driver",
-          "image": "./src/assets/images/crew-1.png"
+          "image": "/assets/images/crew-1.png"
         },
         {
           "name": "Max Green",
           "position": "Junior Ticket Inspector",
-          "image": "./src/assets/images/crew-3.png"
+          "image": "/assets/images/crew-3.png"
         },
         {
           "name": "Mia Red",
           "position": "Conductor",
-          "image": "./src/assets/images/crew-1.png"
+          "image": "/assets/images/crew-1.png"
         }
       ]
     },
@@ -335,22 +335,22 @@
         {
           "name": "Daniel Black",
           "position": "Train Driver",
-          "image": "./src/assets/images/crew-1.png"
+          "image": "/assets/images/crew-1.png"
         },
         {
           "name": "Charlotte White",
           "position": "Ticket Inspector",
-          "image": "./src/assets/images/crew-2.png"
+          "image": "/assets/images/crew-2.png"
         },
         {
           "name": "Max Green",
           "position": "Junior Ticket Inspector",
-          "image": "./src/assets/images/crew-3.png"
+          "image": "/assets/images/crew-3.png"
         },
         {
           "name": "Mia Red",
           "position": "Conductor",
-          "image": "./src/assets/images/crew-1.png"
+          "image": "/assets/images/crew-1.png"
         }
       ]
     },
@@ -426,22 +426,22 @@
         {
           "name": "Charlotte White",
           "position": "Ticket Inspector",
-          "image": "./src/assets/images/crew-2.png"
+          "image": "/assets/images/crew-2.png"
         },
         {
           "name": "Daniel Black",
           "position": "Train Driver",
-          "image": "./src/assets/images/crew-1.png"
+          "image": "/assets/images/crew-1.png"
         },
         {
           "name": "Max Green",
           "position": "Junior Ticket Inspector",
-          "image": "./src/assets/images/crew-3.png"
+          "image": "/assets/images/crew-3.png"
         },
         {
           "name": "Mia Red",
           "position": "Conductor",
-          "image": "./src/assets/images/crew-1.png"
+          "image": "/assets/images/crew-1.png"
         }
       ]
     }
