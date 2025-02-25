@@ -205,19 +205,19 @@ const StationDetailsSheet = ({
                 <path
                   d="M1.1001 2.33122C1.1001 1.71834 1.6464 1.24966 2.25215 1.34285L19.0522 3.92747C19.54 4.00252 19.9001 4.42226 19.9001 4.91584V15.8175C19.9001 16.3254 19.5193 16.7527 19.0147 16.8109L2.21472 18.7494C1.62096 18.8179 1.1001 18.3537 1.1001 17.756V2.33122Z"
                   stroke="black"
-                  stroke-width="2"
+                  strokeWidth="2"
                 />
                 <path
                   d="M7.1001 12L7.1001 18"
                   stroke="black"
-                  stroke-width="2"
-                  stroke-linecap="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
                 />
                 <path
                   d="M7.1001 3L7.1001 6"
                   stroke="black"
-                  stroke-width="2"
-                  stroke-linecap="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
                 />
               </svg>
               <p>Passenger Monitor</p>
