@@ -1,7 +1,7 @@
 {
   "INCIDENTS": [
     {
-      "id": "Incident_1",
+      "id": "incident_1",
       "title": "Weather disruption near Zernez Scuol-Tarasp, station",
       "subtitle": "Requesting all the trains that are supposed to stop at Platform 4 to use Platform 5 instead.",
       "description": "A signal failure at Zurich HB is causing delays of up to 30 minutes on multiple routes. Repair teams are on-site.",
@@ -16,7 +16,7 @@
       "incident_date": "2025-02-25"
     },
     {
-      "id": "Incident_2",
+      "id": "incident_2",
       "title": "Landslide near Interlaken Ost",
       "subtitle": "Severe weather conditions near Zernez and Scuol-Tarasp stations have disrupted train services. Authorities are working to assess the damage and resume normal operations as soon as possible",
       "description": "A landslide has blocked the tracks near Interlaken Ost, suspending train services between Interlaken Ost and Grindelwald.",
@@ -31,7 +31,7 @@
       "incident_date": "2025-02-25"
     },
     {
-      "id": "Incident_3",
+      "id": "incident_3",
       "title": "Power Failure at Lausanne Station",
       "subtitle": "Requesting all the trains that are supposed to stop at Platform 4 to use Platform 5 instead.",
       "description": "A power outage at Lausanne station is affecting train departures. Expect delays of up to 45 minutes.",
@@ -46,7 +46,7 @@
       "incident_date": "2025-02-25"
     },
     {
-      "id": "Incident_4",
+      "id": "incident_4",
       "title": "Delayed train at Davos latz middle station",
       "subtitle": "Requesting all the trains that are supposed to stop at Platform 4 to use Platform 5 instead.",
       "description": "Due to a technical issue, all trains to Zurich HB from Bern are departing from Platform 7 instead of Platform 4.",
@@ -61,7 +61,7 @@
       "incident_date": "2025-02-25"
     },
     {
-      "id": "Incident_5",
+      "id": "incident_5",
       "title": "Track Maintenance near Bellinzona",
       "subtitle": "A track obstruction near Kublis station has caused delays in train services. Efforts are underway to clear the obstruction and restore normal operations",
       "description": "Routine track maintenance is being carried out near Bellinzona. Some trains may experience slight delays.",
@@ -76,7 +76,7 @@
       "incident_date": "2025-02-25"
     },
     {
-      "id": "Incident_6",
+      "id": "incident_6",
       "title": "Maintenance work at t.Mortiz",
       "subtitle": "Requesting all the trains that are supposed to stop at Platform 4 to use Platform 5 instead.",
       "description": "Routine track maintenance is being carried out near Bellinzona. Some trains may experience slight delays.",
@@ -91,7 +91,7 @@
       "incident_date": "2025-02-25"
     },
     {
-      "id": "Incident_7",
+      "id": "incident_7",
       "title": "Track obstruction near Kublis station",
       "subtitle": "Requesting all the trains that are supposed to stop at Platform 4 to use Platform 5 instead.",
       "description": "Routine track maintenance is being carried out near Bellinzona. Some trains may experience slight delays.",

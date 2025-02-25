@@ -7,17 +7,21 @@ import RouteDetailsSheet from "@/components/main-sheets/route-details-sheet";
 import StationSheet from "@/components/main-sheets/station-sheet";
 import IncidentsSheet from "@/components/main-sheets/incidents-sheet";
 import MaintenanceSheet from "@/components/main-sheets/maintenance-sheet";
+import IncidentDetails from "@/components/main-sheets/incident-details";
 
 const Home = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const currentRoute = searchParams.get("t");
   const routeDetails = searchParams.get("route-details");
+  const incidentDetails = searchParams.get("incident-details");
 
   const [routesSheetOpen, setRoutesSheetOpen] = useState(false);
   const [stationsSheetOpen, setStationsSheetOpen] = useState(false);
   const [incidentsSheetOpen, setIncidentsSheetOpen] = useState(false);
   const [maintenanceSheetOpen, setMaintenanceSheetOpen] = useState(false);
   const [routeDetailsSheetOpen, setRouteDetailsSheetOpen] = useState(false);
+  const [incidentDetailsSheetOpen, setIncidentDetailsSheetOpen] =
+    useState(false);
 
   useEffect(() => {
     const setSheets = () => {
@@ -50,12 +54,17 @@ const Home = () => {
 
       if (routeDetails) {
         setRouteDetailsSheetOpen(true);
+        setIncidentDetailsSheetOpen(false);
+      } else if (incidentDetails) {
+        setRouteDetailsSheetOpen(false);
+        setIncidentDetailsSheetOpen(true);
       } else {
         setRouteDetailsSheetOpen(false);
+        setIncidentDetailsSheetOpen(false);
       }
     };
     setSheets();
-  }, [currentRoute, routeDetails]);
+  }, [currentRoute, routeDetails, incidentDetails]);
 
   return (
     <>
@@ -77,6 +86,11 @@ const Home = () => {
       <IncidentsSheet
         incidentsSheetOpen={incidentsSheetOpen}
         setIncidentsSheetOpen={setIncidentsSheetOpen}
+      />
+
+      <IncidentDetails
+        incidentDetailSheetOpen={incidentDetailsSheetOpen}
+        setIncidentDetailsSheetOpen={setIncidentDetailsSheetOpen}
       />
 
       <MaintenanceSheet

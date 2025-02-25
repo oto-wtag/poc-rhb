@@ -25,6 +25,12 @@ const IncidentsSheet = ({ incidentsSheetOpen, setIncidentsSheetOpen }) => {
     setSearchParams({});
   };
 
+  const handleGoToIncidentDetails = (route) => {
+    const currentParams = new URLSearchParams(searchParams);
+    currentParams.set("incident-details", route.id);
+    setSearchParams(currentParams);
+  };
+
   const getFormattedDate = () => {
     const date = new Date();
     const day = String(date.getDate()).padStart(2, "0");
@@ -67,7 +73,7 @@ const IncidentsSheet = ({ incidentsSheetOpen, setIncidentsSheetOpen }) => {
         <div className="mt-4 px-[20px] ">
           <ScrollArea className="w-full h-[calc(100dvh-100px)]  overflow-hidden">
             {incidents?.map((incident, index) => (
-              <>
+              <div key={index}>
                 <div className="my-[10px] flex justify-start items-start gap-[10px]">
                   <div className="w-[26px] h-[26px] rounded-[8px]">
                     <img
@@ -77,7 +83,10 @@ const IncidentsSheet = ({ incidentsSheetOpen, setIncidentsSheetOpen }) => {
                     />
                   </div>
                   <div className="flex-1">
-                    <h2 className="font-semibold text-[15px] leading-[22.5px] tracking-[0px] cursor-pointer">
+                    <h2
+                      className="font-semibold text-[15px] leading-[22.5px] tracking-[0px] cursor-pointer"
+                      onClick={() => handleGoToIncidentDetails(incident)}
+                    >
                       {incident.title}
                     </h2>
                     <p className="mt-[8px] font-normal text-[13px] leading-[19.5px] tracking-[0px]">
@@ -91,7 +100,7 @@ const IncidentsSheet = ({ incidentsSheetOpen, setIncidentsSheetOpen }) => {
                   </div>
                 </div>
                 {index !== incidents.length - 1 && <Separator />}
-              </>
+              </div>
             ))}
           </ScrollArea>
         </div>
