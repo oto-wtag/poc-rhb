@@ -8,12 +8,15 @@ import StationSheet from "@/components/main-sheets/station-sheet";
 import StationDetailsSheet from "@/components/main-sheets/station-details-sheet";
 import IncidentsSheet from "@/components/main-sheets/incidents-sheet";
 import MaintenanceSheet from "@/components/main-sheets/maintenance-sheet";
+import IncidentDetails from "@/components/main-sheets/incident-details";
 
 const Home = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const currentRoute = searchParams.get("t");
   const routeDetails = searchParams.get("route-details");
   const stationDetails = searchParams.get("station");
+  const incidentDetails = searchParams.get("incident-details");
+
 
   const [routesSheetOpen, setRoutesSheetOpen] = useState(false);
   const [stationsSheetOpen, setStationsSheetOpen] = useState(false);
@@ -21,6 +24,8 @@ const Home = () => {
   const [maintenanceSheetOpen, setMaintenanceSheetOpen] = useState(false);
   const [routeDetailsSheetOpen, setRouteDetailsSheetOpen] = useState(false);
   const [stationDetailsSheetOpen, setStationDetailsSheetOpen] = useState(false);
+  const [incidentDetailsSheetOpen, setIncidentDetailsSheetOpen] = useState(false);
+
 
   useEffect(() => {
     const setSheets = () => {
@@ -53,8 +58,13 @@ const Home = () => {
 
       if (routeDetails) {
         setRouteDetailsSheetOpen(true);
+        setIncidentDetailsSheetOpen(false);
+      } else if (incidentDetails) {
+        setRouteDetailsSheetOpen(false);
+        setIncidentDetailsSheetOpen(true);
       } else {
         setRouteDetailsSheetOpen(false);
+        setIncidentDetailsSheetOpen(false);
       }
 
       if (stationDetails) {
@@ -64,7 +74,9 @@ const Home = () => {
       }
     };
     setSheets();
-  }, [currentRoute, routeDetails, stationDetails]);
+
+  }, [currentRoute, routeDetails, stationDetails, incidentDetails]);
+
 
   return (
     <>
@@ -91,6 +103,11 @@ const Home = () => {
       <IncidentsSheet
         incidentsSheetOpen={incidentsSheetOpen}
         setIncidentsSheetOpen={setIncidentsSheetOpen}
+      />
+
+      <IncidentDetails
+        incidentDetailSheetOpen={incidentDetailsSheetOpen}
+        setIncidentDetailsSheetOpen={setIncidentDetailsSheetOpen}
       />
 
       <MaintenanceSheet
