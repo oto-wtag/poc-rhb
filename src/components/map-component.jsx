@@ -27,9 +27,8 @@ const MapComponent = () => {
     setSearchParams({ station: station.name });
   };
   const handleIncidentMarkerClick = (incident) => {
-    const currentParams = new URLSearchParams(searchParams);
-    currentParams.set("incident-details", incident.id);
-    setSearchParams(currentParams);
+    setSearchParams({});
+    setSearchParams({ "incident-details": incident.id });
   };
 
   return (
