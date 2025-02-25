@@ -77,7 +77,7 @@ const IncidentsSheet = ({ incidentsSheetOpen, setIncidentsSheetOpen }) => {
                     />
                   </div>
                   <div className="flex-1">
-                    <h2 className="font-semibold text-[15px] leading-[22.5px] tracking-[0px]">
+                    <h2 className="font-semibold text-[15px] leading-[22.5px] tracking-[0px] cursor-pointer">
                       {incident.title}
                     </h2>
                     <p className="mt-[8px] font-normal text-[13px] leading-[19.5px] tracking-[0px]">
