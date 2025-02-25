@@ -7,11 +7,14 @@ import TrainIcon from "../assets/icons/marked-train.svg";
 import StationIcon from "../assets/icons/station.svg";
 import MarkerComponent from "./ui/marker";
 import { useSearchParams } from "react-router-dom";
+import { INCIDENTS } from "@/data/incident-data.json";
+import IncidentMarkerIcon from "@/assets/icons/incident-marker-icon.svg";
 
 const MapComponent = () => {
   const accessToken = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN;
   const [stations] = useState([...STATIONS]);
   const [trains] = useState([...Trains]);
+  const [incidents] = useState([...INCIDENTS]);
   const [searchParams, setSearchParams] = useSearchParams();
 
   const handleTrainMarkerClick = (route) => {
@@ -52,6 +55,16 @@ const MapComponent = () => {
           latitude={train.location.latitude}
           Icon={TrainIcon}
           handleClick={() => handleTrainMarkerClick(train)}
+        />
+      ))}
+
+      {incidents?.map((incident, index) => (
+        <MarkerComponent
+          key={index}
+          classProps={"cursor-pointer"}
+          longitude={incident.location.longitude}
+          latitude={incident.location.latitude}
+          Icon={IncidentMarkerIcon}
         />
       ))}
     </Map>

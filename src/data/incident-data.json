@@ -1,0 +1,109 @@
+{
+  "INCIDENTS": [
+    {
+      "id": "Incident_1",
+      "title": "Weather disruption near Zernez Scuol-Tarasp, station",
+      "subtitle": "Requesting all the trains that are supposed to stop at Platform 4 to use Platform 5 instead.",
+      "description": "A signal failure at Zurich HB is causing delays of up to 30 minutes on multiple routes. Repair teams are on-site.",
+      "location": {
+        "latitude": 47.378177,
+        "longitude": 8.540192
+      },
+      "time": {
+        "from": "12:00 PM",
+        "to": "04:00 PM"
+      },
+      "incident_date": "2025-02-25"
+    },
+    {
+      "id": "Incident_2",
+      "title": "Landslide near Interlaken Ost",
+      "subtitle": "Severe weather conditions near Zernez and Scuol-Tarasp stations have disrupted train services. Authorities are working to assess the damage and resume normal operations as soon as possible",
+      "description": "A landslide has blocked the tracks near Interlaken Ost, suspending train services between Interlaken Ost and Grindelwald.",
+      "location": {
+        "latitude": 46.6903,
+        "longitude": 7.8698
+      },
+      "time": {
+        "from": "12:10 PM",
+        "to": "03:15 PM"
+      },
+      "incident_date": "2025-02-25"
+    },
+    {
+      "id": "Incident_3",
+      "title": "Power Failure at Lausanne Station",
+      "subtitle": "Requesting all the trains that are supposed to stop at Platform 4 to use Platform 5 instead.",
+      "description": "A power outage at Lausanne station is affecting train departures. Expect delays of up to 45 minutes.",
+      "location": {
+        "latitude": 47.4471,
+        "longitude": 8.5978
+      },
+      "time": {
+        "from": "01:00 PM",
+        "to": "05:00 PM"
+      },
+      "incident_date": "2025-02-25"
+    },
+    {
+      "id": "Incident_4",
+      "title": "Delayed train at Davos latz middle station",
+      "subtitle": "Requesting all the trains that are supposed to stop at Platform 4 to use Platform 5 instead.",
+      "description": "Due to a technical issue, all trains to Zurich HB from Bern are departing from Platform 7 instead of Platform 4.",
+      "location": {
+        "latitude": 47.2724,
+        "longitude": 8.5176
+      },
+      "time": {
+        "from": "2025-02-25T09:00:00Z",
+        "to": "2025-02-25T11:30:00Z"
+      },
+      "incident_date": "2025-02-25"
+    },
+    {
+      "id": "Incident_5",
+      "title": "Track Maintenance near Bellinzona",
+      "subtitle": "A track obstruction near Kublis station has caused delays in train services. Efforts are underway to clear the obstruction and restore normal operations",
+      "description": "Routine track maintenance is being carried out near Bellinzona. Some trains may experience slight delays.",
+      "location": {
+        "latitude": 47.3471,
+        "longitude": 8.7678
+      },
+      "time": {
+        "from": "03:00 PM",
+        "to": "07:10 PM"
+      },
+      "incident_date": "2025-02-25"
+    },
+    {
+      "id": "Incident_6",
+      "title": "Maintenance work at t.Mortiz",
+      "subtitle": "Requesting all the trains that are supposed to stop at Platform 4 to use Platform 5 instead.",
+      "description": "Routine track maintenance is being carried out near Bellinzona. Some trains may experience slight delays.",
+      "location": {
+        "latitude": 47.4729,
+        "longitude": 8.3263
+      },
+      "time": {
+        "from": "2025-02-25T22:00:00Z",
+        "to": "2025-02-26T04:00:00Z"
+      },
+      "incident_date": "2025-02-25"
+    },
+    {
+      "id": "Incident_7",
+      "title": "Track obstruction near Kublis station",
+      "subtitle": "Requesting all the trains that are supposed to stop at Platform 4 to use Platform 5 instead.",
+      "description": "Routine track maintenance is being carried out near Bellinzona. Some trains may experience slight delays.",
+      "location": {
+        "latitude": 47.4516,
+        "longitude": 8.9454
+      },
+      "time": {
+        "from": "05:00 PM",
+        "to": "11:30 PM"
+      },
+      "incident_date": "2025-02-25"
+    }
+  ]
+}
