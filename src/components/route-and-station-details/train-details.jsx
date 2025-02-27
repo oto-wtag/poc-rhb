@@ -12,7 +12,7 @@ const TrainDetails = ({ trainInfo }) => {
   const imageArray = [Crew1, Crew2, Crew3];
   return (
     <ScrollArea className="h-[calc(100dvh-420px)] md:h-[calc(100dvh-460px)] whitespace-nowrap ">
-      <div className="my-3 flex gap-[2px] border justify-center">
+      <div className="my-3 flex gap-[2px] justify-center">
         <div className="w-[50px] h-[50px]">
           <img className="w-full h-full" src={TrainEngine} alt="engine" />
         </div>
