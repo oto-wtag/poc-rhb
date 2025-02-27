@@ -53,7 +53,7 @@ const IncidentsSheet = ({ incidentsSheetOpen, setIncidentsSheetOpen }) => {
         overlay={false}
       >
         <SheetHeader>
-          <SheetTitle className="font-semibold font-semibold text-[20px] leading-[20px] tracking-[0px]">
+          <SheetTitle className="font-semibold text-[20px] leading-[20px] tracking-[0px]">
             Incidents
           </SheetTitle>
         </SheetHeader>
@@ -70,40 +70,38 @@ const IncidentsSheet = ({ incidentsSheetOpen, setIncidentsSheetOpen }) => {
           </span>
         </div>
 
-        <div className="mt-4 px-[20px] ">
-          <ScrollArea className="w-full h-[calc(100dvh-100px)]  overflow-hidden">
-            {incidents?.map((incident, index) => (
-              <div key={index}>
-                <div className="my-[10px] flex justify-start items-start gap-[10px]">
-                  <div className="w-[26px] h-[26px] rounded-[8px]">
-                    <img
-                      className="w-full h-full rounded-[8px]"
-                      src={IncidentIcon}
-                      alt="Incident"
-                    />
-                  </div>
-                  <div className="flex-1">
-                    <h2
-                      className="font-semibold text-[15px] leading-[22.5px] tracking-[0px] cursor-pointer"
-                      onClick={() => handleGoToIncidentDetails(incident)}
-                    >
-                      {incident.title}
-                    </h2>
-                    <p className="mt-[8px] font-normal text-[13px] leading-[19.5px] tracking-[0px]">
-                      <span className="text-wrap">{incident.subtitle}</span>
-                    </p>
-                    <div className="mt-[8px] font-semibold text-[13px] leading-[19.5px] tracking-[0px]">
-                      Today <span> {incident.time.from}</span> -
-                      <span> {incident.time.to} </span>
-                      <span>({getFormattedDate()})</span>
-                    </div>
+        <ScrollArea className="px-4 w-full h-[calc(100dvh-215px)] md:h-[calc(100dvh-265px)] overflow-hidden">
+          {incidents?.map((incident, index) => (
+            <div key={index}>
+              <div className="my-[10px] flex justify-start items-start gap-[10px]">
+                <div className="w-[26px] h-[26px] rounded-[8px]">
+                  <img
+                    className="w-full h-full rounded-[8px]"
+                    src={IncidentIcon}
+                    alt="Incident"
+                  />
+                </div>
+                <div
+                  className="flex-1 cursor-pointer"
+                  onClick={() => handleGoToIncidentDetails(incident)}
+                >
+                  <h2 className="font-semibold text-[15px] leading-[22.5px] tracking-[0px]">
+                    {incident.title}
+                  </h2>
+                  <p className="mt-[8px] font-normal text-[13px] leading-[19.5px] tracking-[0px]">
+                    <span className="text-wrap">{incident.subtitle}</span>
+                  </p>
+                  <div className="mt-[8px] font-semibold text-[13px] leading-[19.5px] tracking-[0px]">
+                    Today <span> {incident.time.from}</span> -
+                    <span> {incident.time.to} </span>
+                    <span>({getFormattedDate()})</span>
                   </div>
                 </div>
-                {index !== incidents.length - 1 && <Separator />}
               </div>
-            ))}
-          </ScrollArea>
-        </div>
+              {index !== incidents.length - 1 && <Separator />}
+            </div>
+          ))}
+        </ScrollArea>
       </SheetContent>
     </Sheet>
   );

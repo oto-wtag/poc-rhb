@@ -132,7 +132,7 @@ const StationDetailsSheet = ({
               </svg>
               <p>Next arrival</p>
             </div>
-            <ScrollArea className="h-[calc(100dvh-450px)]">
+            <ScrollArea className="h-[calc(100dvh-400px)] md:h-[calc(100dvh-450px)]">
               <div className="space-y-3">
                 {data.next_arrivals && data.next_arrivals.length > 0 ? (
                   data.next_arrivals.map((nextArrival, index) => (
