@@ -77,9 +77,10 @@ const Home = () => {
   }, [currentRoute, routeDetails, stationDetails, incidentDetails]);
 
   const setMapViewParams = (param) => {
-    const newParams = new URLSearchParams(searchParams);
-    newParams.set("mv", param);
-    setSearchParams(newParams);
+    setSearchParams({ mv: param });
+    // const newParams = new URLSearchParams(searchParams);
+    // newParams.set("mv", param);
+    // setSearchParams(newParams);
   };
 
   return (

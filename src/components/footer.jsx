@@ -20,7 +20,15 @@ const Footer = () => {
   const currentPath = searchParams.get("t");
 
   const handleNavigation = (path) => {
-    setSearchParams({ t: path });
+    const newParams = new URLSearchParams(searchParams);
+    newParams.forEach((_, key) => {
+      if (key !== "mv") {
+        newParams.delete(key);
+      }
+    });
+    newParams.set("t", path);
+
+    setSearchParams(newParams);
   };
 
   return (
