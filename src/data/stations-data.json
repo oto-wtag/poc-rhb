@@ -1,6 +1,312 @@
 {
   "stations": [
     {
+      "name": "Schiers",
+      "latitude": 46.9694,
+      "longitude": 9.6883,
+      "deviations": [],
+      "maintenance": [],
+      "incidents": [],
+      "next_arrivals": [
+        {
+          "arrival_time": "2025-03-01T14:35:00",
+          "train_number": "1042/RE38-0759",
+          "delay": 2,
+          "departed_from": "Zurich HB",
+          "departure_time": "2025-03-01T14:05:00"
+        }
+      ]
+    },
+    {
+      "name": "Seewis",
+      "latitude": 46.9769,
+      "longitude": 9.6325,
+      "deviations": [],
+      "maintenance": [],
+      "incidents": [],
+      "next_arrivals": [
+        {
+          "arrival_time": "2025-03-01T14:35:00",
+          "train_number": "1042/RE38-0759",
+          "delay": 2,
+          "departed_from": "Zurich HB",
+          "departure_time": "2025-03-01T14:05:00"
+        }
+      ]
+    },
+    {
+      "name": "Landquart",
+      "latitude": 46.9667,
+      "longitude": 9.5667,
+      "deviations": [],
+      "maintenance": [],
+      "incidents": [],
+      "next_arrivals": [
+        {
+          "arrival_time": "2025-03-01T14:35:00",
+          "train_number": "1042/RE38-0759",
+          "delay": 2,
+          "departed_from": "Zurich HB",
+          "departure_time": "2025-03-01T14:05:00"
+        }
+      ]
+    },
+    {
+      "name": "Zizers",
+      "latitude": 46.9342,
+      "longitude": 9.5558,
+      "deviations": [],
+      "maintenance": [],
+      "incidents": [],
+      "next_arrivals": [
+        {
+          "arrival_time": "2025-03-01T14:35:00",
+          "train_number": "1042/RE38-0759",
+          "delay": 2,
+          "departed_from": "Zurich HB",
+          "departure_time": "2025-03-01T14:05:00"
+        }
+      ]
+    },
+    {
+      "name": "Untervaz",
+      "latitude": 46.9206,
+      "longitude": 9.5158,
+      "deviations": [],
+      "maintenance": [],
+      "incidents": [],
+      "next_arrivals": [
+        {
+          "arrival_time": "2025-03-01T14:35:00",
+          "train_number": "1042/RE38-0759",
+          "delay": 2,
+          "departed_from": "Zurich HB",
+          "departure_time": "2025-03-01T14:05:00"
+        }
+      ]
+    },
+    {
+      "name": "Haldenstein",
+      "latitude": 46.8833,
+      "longitude": 9.5333,
+      "deviations": [],
+      "maintenance": [],
+      "incidents": [],
+      "next_arrivals": [
+        {
+          "arrival_time": "2025-03-01T14:35:00",
+          "train_number": "1042/RE38-0759",
+          "delay": 2,
+          "departed_from": "Zurich HB",
+          "departure_time": "2025-03-01T14:05:00"
+        }
+      ]
+    },
+    {
+      "name": "Chur",
+      "latitude": 46.85,
+      "longitude": 9.5333,
+      "deviations": [],
+      "maintenance": [],
+      "incidents": [],
+      "next_arrivals": [
+        {
+          "arrival_time": "2025-03-01T17:30:00",
+          "train_number": "4042/RE-1234",
+          "delay": 0,
+          "departed_from": "St. Gallen",
+          "departure_time": "2025-03-01T17:00:00"
+        }
+      ]
+    },
+    {
+      "name": "Domat/Ems",
+      "latitude": 46.8333,
+      "longitude": 9.45,
+      "deviations": [],
+      "maintenance": [],
+      "incidents": [],
+      "next_arrivals": [
+        {
+          "arrival_time": "2025-03-01T14:35:00",
+          "train_number": "1042/RE38-0759",
+          "delay": 2,
+          "departed_from": "Zurich HB",
+          "departure_time": "2025-03-01T14:05:00"
+        }
+      ]
+    },
+    {
+      "name": "Reichenau",
+      "latitude": 46.8167,
+      "longitude": 9.4167,
+      "deviations": [],
+      "maintenance": [],
+      "incidents": [],
+      "next_arrivals": [
+        {
+          "arrival_time": "2025-03-01T14:35:00",
+          "train_number": "1042/RE38-0759",
+          "delay": 2,
+          "departed_from": "Zurich HB",
+          "departure_time": "2025-03-01T14:05:00"
+        }
+      ]
+    },
+    {
+      "name": "Castiel",
+      "latitude": 46.8333,
+      "longitude": 9.6167,
+      "deviations": [],
+      "maintenance": [],
+      "incidents": [],
+      "next_arrivals": [
+        {
+          "arrival_time": "2025-03-01T14:35:00",
+          "train_number": "1042/RE38-0759",
+          "delay": 2,
+          "departed_from": "Zurich HB",
+          "departure_time": "2025-03-01T14:05:00"
+        }
+      ]
+    },
+    {
+      "name": "St. Peter",
+      "latitude": 46.8167,
+      "longitude": 9.6333,
+      "deviations": [],
+      "maintenance": [],
+      "incidents": [],
+      "next_arrivals": [
+        {
+          "arrival_time": "2025-03-01T14:35:00",
+          "train_number": "1042/RE38-0759",
+          "delay": 2,
+          "departed_from": "Zurich HB",
+          "departure_time": "2025-03-01T14:05:00"
+        }
+      ]
+    },
+    {
+      "name": "Arosa",
+      "latitude": 46.7833,
+      "longitude": 9.6833,
+      "deviations": [],
+      "maintenance": [],
+      "incidents": [],
+      "next_arrivals": [
+        {
+          "arrival_time": "2025-03-01T14:35:00",
+          "train_number": "1042/RE38-0759",
+          "delay": 2,
+          "departed_from": "Zurich HB",
+          "departure_time": "2025-03-01T14:05:00"
+        }
+      ]
+    },
+    {
+      "name": "Rothenbrunnen",
+      "latitude": 46.7333,
+      "longitude": 9.4333,
+      "deviations": [],
+      "maintenance": [],
+      "incidents": [],
+      "next_arrivals": [
+        {
+          "arrival_time": "2025-03-01T14:35:00",
+          "train_number": "1042/RE38-0759",
+          "delay": 2,
+          "departed_from": "Zurich HB",
+          "departure_time": "2025-03-01T14:05:00"
+        }
+      ]
+    },
+    {
+      "name": "Rodels",
+      "latitude": 46.7333,
+      "longitude": 9.45,
+      "deviations": [],
+      "maintenance": [],
+      "incidents": [],
+      "next_arrivals": [
+        {
+          "arrival_time": "2025-03-01T14:35:00",
+          "train_number": "1042/RE38-0759",
+          "delay": 2,
+          "departed_from": "Zurich HB",
+          "departure_time": "2025-03-01T14:05:00"
+        }
+      ]
+    },
+    {
+      "name": "Cazis",
+      "latitude": 46.7167,
+      "longitude": 9.4333,
+      "deviations": [],
+      "maintenance": [],
+      "incidents": [],
+      "next_arrivals": [
+        {
+          "arrival_time": "2025-03-01T14:35:00",
+          "train_number": "1042/RE38-0759",
+          "delay": 2,
+          "departed_from": "Zurich HB",
+          "departure_time": "2025-03-01T14:05:00"
+        }
+      ]
+    },
+    {
+      "name": "Thusis",
+      "latitude": 46.7,
+      "longitude": 9.4333,
+      "deviations": [],
+      "maintenance": [],
+      "incidents": [],
+      "next_arrivals": [
+        {
+          "arrival_time": "2025-03-01T14:35:00",
+          "train_number": "1042/RE38-0759",
+          "delay": 2,
+          "departed_from": "Zurich HB",
+          "departure_time": "2025-03-01T14:05:00"
+        }
+      ]
+    },
+    {
+      "name": "Tiefencastel",
+      "latitude": 46.6667,
+      "longitude": 9.5833,
+      "deviations": [],
+      "maintenance": [],
+      "incidents": [],
+      "next_arrivals": [
+        {
+          "arrival_time": "2025-03-01T14:35:00",
+          "train_number": "1042/RE38-0759",
+          "delay": 2,
+          "departed_from": "Zurich HB",
+          "departure_time": "2025-03-01T14:05:00"
+        }
+      ]
+    },
+    {
+      "name": "Filisur",
+      "latitude": 46.6753,
+      "longitude": 9.6831,
+      "deviations": [],
+      "maintenance": [],
+      "incidents": [],
+      "next_arrivals": [
+        {
+          "arrival_time": "2025-03-01T14:35:00",
+          "train_number": "1042/RE38-0759",
+          "delay": 2,
+          "departed_from": "Zurich HB",
+          "departure_time": "2025-03-01T14:05:00"
+        }
+      ]
+    },
+    {
       "name": "Zurich HB",
       "latitude": 47.378177,
       "longitude": 8.540192,
@@ -316,23 +622,6 @@
           "delay": 0,
           "departed_from": "Zurich HB",
           "departure_time": "2025-03-01T16:45:00"
-        }
-      ]
-    },
-    {
-      "name": "Chur",
-      "latitude": 46.8508,
-      "longitude": 9.531,
-      "deviations": [],
-      "maintenance": [],
-      "incidents": [],
-      "next_arrivals": [
-        {
-          "arrival_time": "2025-03-01T17:30:00",
-          "train_number": "4042/RE-1234",
-          "delay": 0,
-          "departed_from": "St. Gallen",
-          "departure_time": "2025-03-01T17:00:00"
         }
       ]
     },

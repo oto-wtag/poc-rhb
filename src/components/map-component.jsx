@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Map, { NavigationControl } from "react-map-gl/mapbox";
+import Map, { NavigationControl, Layer, Source } from "react-map-gl/mapbox";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { STATIONS } from "../data/stations.json";
 import { Trains } from "../data/trains.json";
@@ -11,6 +11,7 @@ import { INCIDENTS } from "@/data/incident-data.json";
 import IncidentMarkerIcon from "@/assets/icons/incident-marker-icon.svg";
 import StationData from "@/data/stations-data.json";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { useEffect } from "react";
 
 const MapComponent = () => {
   const accessToken = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN;
@@ -19,6 +20,13 @@ const MapComponent = () => {
   const [incidents] = useState([...INCIDENTS]);
   const [searchParams, setSearchParams] = useSearchParams();
   const isMobile = useIsMobile();
+  const [transitData, setTransitData] = useState(null);
+
+  useEffect(() => {
+    fetch("/hotosm_che_railways_lines_geojson.geojson")
+      .then((response) => response.json())
+      .then((data) => setTransitData(data));
+  }, []);
 
   const handleTrainMarkerClick = (route) => {
     const newParams = new URLSearchParams(searchParams);
@@ -45,16 +53,21 @@ const MapComponent = () => {
   };
 
   const handleIncidentMarkerClick = (incident) => {
-    const newParams = new URLSearchParams(searchParams);
+    setSearchParams({});
+    setSearchParams({ "incident-details": incident.id });
+  };
 
-    newParams.forEach((_, key) => {
-      if (key !== "mv") {
-        newParams.delete(key);
-      }
-    });
-
-    newParams.set("incident-details", incident.id);
-    setSearchParams(newParams);
+  const layerStyle = {
+    id: "railway-route",
+    type: "line",
+    paint: {
+      "line-color": "#FF0000", // Red line
+      "line-width": 4, // Thickness
+    },
+    layout: {
+      "line-join": "round",
+      "line-cap": "round",
+    },
   };
 
   return (
@@ -104,6 +117,10 @@ const MapComponent = () => {
           handleClick={() => handleIncidentMarkerClick(incident)}
         />
       ))}
+
+      <Source id="polylineLayer" type="geojson" data={transitData}>
+        <Layer {...layerStyle} />
+      </Source>
     </Map>
   );
 };
