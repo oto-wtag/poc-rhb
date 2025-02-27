@@ -21,18 +21,40 @@ const MapComponent = () => {
   const isMobile = useIsMobile();
 
   const handleTrainMarkerClick = (route) => {
-    setSearchParams({});
-    setSearchParams({ "route-details": route.id });
+    const newParams = new URLSearchParams(searchParams);
+    newParams.forEach((_, key) => {
+      if (key !== "mv") {
+        newParams.delete(key);
+      }
+    });
+    newParams.set("route-details", route.id);
+    setSearchParams(newParams);
   };
 
   const handleStationMarkerClick = (station) => {
-    setSearchParams({});
-    setSearchParams({ station: station.name.toLowerCase() });
+    const newParams = new URLSearchParams(searchParams);
+
+    newParams.forEach((_, key) => {
+      if (key !== "mv") {
+        newParams.delete(key);
+      }
+    });
+
+    newParams.set("station", station.name.toLowerCase());
+    setSearchParams(newParams);
   };
 
   const handleIncidentMarkerClick = (incident) => {
-    setSearchParams({});
-    setSearchParams({ "incident-details": incident.id });
+    const newParams = new URLSearchParams(searchParams);
+
+    newParams.forEach((_, key) => {
+      if (key !== "mv") {
+        newParams.delete(key);
+      }
+    });
+
+    newParams.set("incident-details", incident.id);
+    setSearchParams(newParams);
   };
 
   return (
