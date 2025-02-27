@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Map from "react-map-gl/mapbox";
+import Map, { Layer, Source } from "react-map-gl/mapbox";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { STATIONS } from "../data/stations.json";
 import { Trains } from "../data/trains.json";
@@ -10,6 +10,7 @@ import { useSearchParams } from "react-router-dom";
 import { INCIDENTS } from "@/data/incident-data.json";
 import IncidentMarkerIcon from "@/assets/icons/incident-marker-icon.svg";
 import StationData from "@/data/stations-data.json";
+import { useEffect } from "react";
 
 const MapComponent = () => {
   const accessToken = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN;
@@ -17,6 +18,13 @@ const MapComponent = () => {
   const [trains] = useState([...Trains]);
   const [incidents] = useState([...INCIDENTS]);
   const [searchParams, setSearchParams] = useSearchParams();
+  const [transitData, setTransitData] = useState(null);
+
+  useEffect(() => {
+    fetch("/hotosm_che_railways_lines_geojson.geojson")
+      .then((response) => response.json())
+      .then((data) => setTransitData(data));
+  }, []);
 
   const handleTrainMarkerClick = (route) => {
     setSearchParams({});
@@ -31,6 +39,19 @@ const MapComponent = () => {
   const handleIncidentMarkerClick = (incident) => {
     setSearchParams({});
     setSearchParams({ "incident-details": incident.id });
+  };
+
+  const layerStyle = {
+    id: "railway-route",
+    type: "line",
+    paint: {
+      "line-color": "#FF0000", // Red line
+      "line-width": 4, // Thickness
+    },
+    layout: {
+      "line-join": "round",
+      "line-cap": "round",
+    },
   };
 
   return (
@@ -79,6 +100,10 @@ const MapComponent = () => {
           handleClick={() => handleIncidentMarkerClick(incident)}
         />
       ))}
+
+      <Source id="polylineLayer" type="geojson" data={transitData}>
+        <Layer {...layerStyle} />
+      </Source>
     </Map>
   );
 };
