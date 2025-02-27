@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Map, { NavigationControl }, { Layer, Source } from "react-map-gl/mapbox";
+import Map, { NavigationControl, Layer, Source } from "react-map-gl/mapbox";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { STATIONS } from "../data/stations.json";
 import { Trains } from "../data/trains.json";
