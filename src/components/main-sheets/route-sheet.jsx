@@ -66,7 +66,7 @@ const RouteSheet = ({ routesSheetOpen, setRoutesSheetOpen }) => {
           </div>
           <ScrollBar orientation="horizontal" />
         </ScrollArea>
-        <ScrollArea className="h-[calc(100dvh-320px)] whitespace-nowrap overflow-hidden">
+        <ScrollArea className="h-[calc(100dvh-270px)] md:h-[calc(100dvh-320px)] whitespace-nowrap overflow-hidden">
           <div className="px-4 space-y-3">
             {RouteData.routes.map((route, index) => (
               <React.Fragment key={route.id}>

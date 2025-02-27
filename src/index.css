@@ -1,6 +1,12 @@
+html,
+body {
+  overscroll-behavior: none;
+}
+
 .mapboxgl-ctrl-group {
   margin-top: 80px !important;
 }
+
 .text-wrap {
   overflow: hidden;
   display: -webkit-box;

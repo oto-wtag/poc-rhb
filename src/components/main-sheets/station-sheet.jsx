@@ -56,7 +56,7 @@ const StationSheet = ({ stationsSheetOpen, setStationsSheetOpen }) => {
             className="bg-muted rounded-full h-8 text-muted-foreground"
           />
         </div>
-        <ScrollArea className="h-[calc(100dvh-258px)] px-2 mb-2">
+        <ScrollArea className="h-[calc(100dvh-208px)] md:h-[calc(100dvh-258px)] px-2 mb-2">
           <div className="space-y-1">
             {StationData.stations.map((stations, index) => (
               <React.Fragment key={index}>
