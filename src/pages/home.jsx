@@ -9,6 +9,7 @@ import StationDetailsSheet from "@/components/main-sheets/station-details-sheet"
 import IncidentsSheet from "@/components/main-sheets/incidents-sheet";
 import MaintenanceSheet from "@/components/main-sheets/maintenance-sheet";
 import IncidentDetails from "@/components/main-sheets/incident-details";
+import MapDetailComponent from "@/components/map-detail-component";
 
 const Home = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -120,7 +121,7 @@ const Home = () => {
         setMaintenanceSheetOpen={setMaintenanceSheetOpen}
       />
 
-      <div className="outline-2 overflow-hidden outline-white fixed bottom-26 right-10 z-50 bg-white rounded-full">
+      <div className="shadow-md outline-2 overflow-hidden outline-white fixed bottom-22 right-5 z-50 bg-white rounded-full">
         <div className="flex">
           <div
             className={`px-3 py-1 ${
@@ -207,7 +208,7 @@ const Home = () => {
         </div>
       </div>
 
-      <MapComponent />
+      {mapView === "map" ? <MapComponent /> : <MapDetailComponent />}
     </div>
   );
 };

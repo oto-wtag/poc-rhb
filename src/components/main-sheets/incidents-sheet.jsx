@@ -20,9 +20,16 @@ const IncidentsSheet = ({ incidentsSheetOpen, setIncidentsSheetOpen }) => {
   const isMobile = useIsMobile();
   const [incidents] = useState([...INCIDENTS]);
   const [searchParams, setSearchParams] = useSearchParams();
+
   const closeSheet = () => {
     setIncidentsSheetOpen(false);
-    setSearchParams({});
+    const newParams = new URLSearchParams(searchParams);
+    newParams.forEach((_, key) => {
+      if (key !== "mv") {
+        newParams.delete(key);
+      }
+    });
+    setSearchParams(newParams);
   };
 
   const handleGoToIncidentDetails = (route) => {
