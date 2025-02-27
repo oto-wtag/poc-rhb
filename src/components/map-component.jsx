@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Map from "react-map-gl/mapbox";
+import Map, { NavigationControl } from "react-map-gl/mapbox";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { STATIONS } from "../data/stations.json";
 import { Trains } from "../data/trains.json";
@@ -10,6 +10,7 @@ import { useSearchParams } from "react-router-dom";
 import { INCIDENTS } from "@/data/incident-data.json";
 import IncidentMarkerIcon from "@/assets/icons/incident-marker-icon.svg";
 import StationData from "@/data/stations-data.json";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const MapComponent = () => {
   const accessToken = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN;
@@ -17,6 +18,7 @@ const MapComponent = () => {
   const [trains] = useState([...Trains]);
   const [incidents] = useState([...INCIDENTS]);
   const [searchParams, setSearchParams] = useSearchParams();
+  const isMobile = useIsMobile();
 
   const handleTrainMarkerClick = (route) => {
     setSearchParams({});
@@ -47,6 +49,7 @@ const MapComponent = () => {
       }}
       mapStyle="mapbox://styles/mapbox/streets-v12"
     >
+      <NavigationControl position={isMobile ? "top-right" : "top-left"} />
       {StationData.stations.map((station, index) => (
         <MarkerComponent
           key={index}
