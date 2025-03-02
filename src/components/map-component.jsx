@@ -61,8 +61,8 @@ const MapComponent = () => {
     id: "railway-route",
     type: "line",
     paint: {
-      "line-color": "#FF0000", // Red line
-      "line-width": 4, // Thickness
+      "line-color": "#666666", // Rail line
+      "line-width": 2, // Thickness
     },
     layout: {
       "line-join": "round",
