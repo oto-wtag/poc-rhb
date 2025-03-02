@@ -74,8 +74,8 @@ const MapComponent = () => {
     <Map
       mapboxAccessToken={accessToken}
       initialViewState={{
-        latitude: 47.3471,
-        longitude: 8.7178,
+        latitude: 46.8224,
+        longitude: 8.8316,
         zoom: 9,
       }}
       style={{

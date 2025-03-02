@@ -44,7 +44,7 @@
       "departureTime": "2025-02-23T10:35:00Z",
       "delay": 1,
       "route": ["Basel SBB", "Liestal", "Aarau", "Zurich HB"],
-      "location": { "latitude": 47.5596, "longitude": 7.588576 },
+      "location": { "latitude": 47.5596, "longitude": 7.5678 },
       "status": "Delayed"
     },
     {
@@ -61,7 +61,7 @@
       "status": "Delayed"
     },
     {
-      "id": "route_4",
+      "id": "route_5",
       "trainNumber": "R1602",
       "trainName": "RegioExpress",
       "currentStation": "Lucerne",
@@ -74,6 +74,7 @@
       "status": "On Time"
     },
     {
+      "id": "route_6",
       "trainNumber": "S5 1523",
       "trainName": "S-Bahn Zürich",
       "currentStation": "Zurich HB",
@@ -82,11 +83,11 @@
       "departureTime": "2025-02-23T13:35:00Z",
       "delay": 3,
       "route": ["Zurich HB", "Sihlwald", "Uetliberg"],
-      "location": { "latitude": 47.0024, "longitude": 8.5176 },
+      "location": { "latitude": 47.0224, "longitude": 8.6316 },
       "status": "Delayed"
     },
     {
-      "id": "route_5",
+      "id": "route_7",
       "trainNumber": "IC5 1189",
       "trainName": "InterCity 5",
       "currentStation": "Zurich HB",
@@ -99,7 +100,7 @@
       "status": "On Time"
     },
     {
-      "id": "route_2",
+      "id": "route_8",
       "trainNumber": "S1 1007",
       "trainName": "S-Bahn Zürich",
       "currentStation": "Zurich HB",
@@ -112,7 +113,7 @@
       "status": "Delayed"
     },
     {
-      "id": "route_3",
+      "id": "route_9",
       "trainNumber": "IC1 1109",
       "trainName": "InterCity 1",
       "currentStation": "Bern",
@@ -125,7 +126,7 @@
       "status": "On Time"
     },
     {
-      "id": "route_2",
+      "id": "route_10",
       "trainNumber": "R 1230",
       "trainName": "RegioExpress",
       "currentStation": "Zurich HB",
@@ -134,11 +135,11 @@
       "departureTime": "2025-02-23T17:10:00Z",
       "delay": 0,
       "route": ["Zurich HB", "Sargans", "Chur"],
-      "location": { "latitude": 47.599, "longitude": 7.9032 },
+      "location": { "latitude": 47.5501, "longitude": 7.9032 },
       "status": "On Time"
     },
     {
-      "id": "route_4",
+      "id": "route_11",
       "trainNumber": "SBB 1402",
       "trainName": "S-Bahn Zürich",
       "currentStation": "Zurich HB",
@@ -147,11 +148,11 @@
       "departureTime": "2025-02-23T18:05:00Z",
       "delay": 0,
       "route": ["Zurich HB", "Winterthur", "Schaffhausen"],
-      "location": { "latitude": 46.378177, "longitude": 8.540192 },
+      "location": { "latitude": 46.349977, "longitude": 8.9642 },
       "status": "On Time"
     },
     {
-      "id": "route_5",
+      "id": "route_12",
       "trainNumber": "IC1 1210",
       "trainName": "InterCity 1",
       "currentStation": "Zurich HB",
@@ -160,11 +161,11 @@
       "departureTime": "2025-02-23T19:05:00Z",
       "delay": 2,
       "route": ["Zurich HB", "Thalwil", "Luzern"],
-      "location": { "latitude": 47.378177, "longitude": 8.940192 },
+      "location": { "latitude": 47.278177, "longitude": 8.821192 },
       "status": "Delayed"
     },
     {
-      "id": "route_1",
+      "id": "route_13",
       "trainNumber": "R 2314",
       "trainName": "RegioExpress",
       "currentStation": "St. Gallen",
@@ -177,7 +178,7 @@
       "status": "On Time"
     },
     {
-      "id": "route_1",
+      "id": "route_14",
       "trainNumber": "IC3 1236",
       "trainName": "InterCity 3",
       "currentStation": "Lausanne",
@@ -190,6 +191,7 @@
       "status": "Delayed"
     },
     {
+      "id":"route_22",
       "trainNumber": "S2 1418",
       "trainName": "S-Bahn Zürich",
       "currentStation": "Zurich HB",
@@ -198,10 +200,11 @@
       "departureTime": "2025-02-23T22:05:00Z",
       "delay": 0,
       "route": ["Zurich HB", "Wohlen", "Baden"],
-      "location": { "latitude": 47.0806, "longitude": 9.0684 },
+      "location": { "latitude": 47.0806, "longitude": 9.0590 },
       "status": "On Time"
     },
     {
+      "id": "route_15",
       "trainNumber": "R 1564",
       "trainName": "RegioExpress",
       "currentStation": "Bern",
@@ -214,7 +217,7 @@
       "status": "On Time"
     },
     {
-      "id": "route_3",
+      "id": "route_16",
       "trainNumber": "IC1 1015",
       "trainName": "InterCity 1",
       "currentStation": "Zurich HB",
@@ -223,10 +226,11 @@
       "departureTime": "2025-02-24T00:05:00Z",
       "delay": 2,
       "route": ["Zurich HB", "Winterthur", "St. Gallen"],
-      "location": { "latitude": 46.8978, "longitude": 9.431 },
+      "location": { "latitude": 46.8978, "longitude": 9.5428 },
       "status": "Delayed"
     },
     {
+      "id": "route_17",
       "trainNumber": "IC1 1500",
       "trainName": "InterCity 1",
       "currentStation": "Zurich HB",
@@ -235,11 +239,11 @@
       "departureTime": "2025-02-24T06:05:00Z",
       "delay": 0,
       "route": ["Zurich HB", "Baden", "Aarau", "Basel SBB"],
-      "location": { "latitude": 46.8538, "longitude": 9.1535 },
+      "location": { "latitude": 46.6345, "longitude": 8.59126 },
       "status": "On Time"
     },
     {
-      "id": "route_5",
+      "id": "route_18",
       "trainNumber": "R 1760",
       "trainName": "RegioExpress",
       "currentStation": "Geneva Cornavin",
@@ -252,7 +256,7 @@
       "status": "On Time"
     },
     {
-      "id": "route_2",
+      "id": "route_19",
       "trainNumber": "IC1 1015",
       "trainName": "InterCity 1",
       "currentStation": "Zurich HB",
@@ -261,11 +265,11 @@
       "departureTime": "2025-02-24T00:05:00Z",
       "delay": 2,
       "route": ["Zurich HB", "Winterthur", "St. Gallen"],
-      "location": { "latitude": 46.2031, "longitude": 7.8816 },
+      "location": { "latitude": 46.3075, "longitude": 7.8805 },
       "status": "Delayed"
     },
     {
-      "id": "route_4",
+      "id": "route_20",
       "trainNumber": "IC1 1500",
       "trainName": "InterCity 1",
       "currentStation": "Zurich HB",
@@ -274,11 +278,11 @@
       "departureTime": "2025-02-24T06:05:00Z",
       "delay": 0,
       "route": ["Zurich HB", "Baden", "Aarau", "Basel SBB"],
-      "location": { "latitude": 46.227, "longitude": 7.759 },
+      "location": { "latitude": 46.3084, "longitude": 7.759 },
       "status": "On Time"
     },
     {
-      "id": "route_5",
+      "id": "route_21",
       "trainNumber": "R 1760",
       "trainName": "RegioExpress",
       "currentStation": "Geneva Cornavin",

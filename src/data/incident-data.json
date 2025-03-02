@@ -39,7 +39,7 @@
       "description": "Limited train service between Giubiasco and Castione-Arbedo are subject to restrictions. This is due to a defect in the overhead line. The restriction lasts at least until 10:39. Lines EC, IC2, IC21, IR26, IR46 and S10 are affected. Allow for delays.",
       "note": "No liability will be accepted for the details or services provided or for adherence to timetables. Please check for possible changes shortly before departure",
       "location": {
-        "latitude": 47.4471,
+        "latitude": 47.4171,
         "longitude": 8.5978
       },
       "time": {
@@ -55,8 +55,8 @@
       "description": "Limited train service between Giubiasco and Castione-Arbedo are subject to restrictions. This is due to a defect in the overhead line. The restriction lasts at least until 10:39. Lines EC, IC2, IC21, IR26, IR46 and S10 are affected. Allow for delays.",
       "note": "No liability will be accepted for the details or services provided or for adherence to timetables. Please check for possible changes shortly before departure",
       "location": {
-        "latitude": 47.2724,
-        "longitude": 8.5176
+        "latitude": 46.7995,
+        "longitude": 8.6719
       },
       "time": {
         "from": "05:00 PM",
@@ -71,8 +71,8 @@
       "description": "Limited train service between Giubiasco and Castione-Arbedo are subject to restrictions. This is due to a defect in the overhead line. The restriction lasts at least until 10:39. Lines EC, IC2, IC21, IR26, IR46 and S10 are affected. Allow for delays.",
       "note": "No liability will be accepted for the details or services provided or for adherence to timetables. Please check for possible changes shortly before departure",
       "location": {
-        "latitude": 47.3471,
-        "longitude": 8.7678
+        "latitude": 46.6886,
+        "longitude": 8.7665
       },
       "time": {
         "from": "03:00 PM",
