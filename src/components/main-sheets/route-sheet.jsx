@@ -21,7 +21,9 @@ const RouteSheet = ({ routesSheetOpen, setRoutesSheetOpen }) => {
 
   const closeSheet = () => {
     setRoutesSheetOpen(false);
-    setSearchParams({});
+    const updatedParams = new URLSearchParams(searchParams);
+    updatedParams.delete("t");
+    setSearchParams(updatedParams);
   };
 
   const handleRouteDetailsData = (route) => {
