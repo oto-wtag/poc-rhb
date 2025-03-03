@@ -1,4 +1,5 @@
 import React from "react";
+import { useSearchParams } from "react-router-dom";
 import {
   Sheet,
   SheetContent,
@@ -12,9 +13,14 @@ const MaintenanceSheet = ({
   maintenanceSheetOpen,
   setMaintenanceSheetOpen,
 }) => {
+  const [searchParams, setSearchParams] = useSearchParams();
   const isMobile = useIsMobile();
+
   const closeSheet = () => {
     setMaintenanceSheetOpen(false);
+    const updatedParams = new URLSearchParams(searchParams);
+    updatedParams.delete("t");
+    setSearchParams(updatedParams);
   };
 
   return (

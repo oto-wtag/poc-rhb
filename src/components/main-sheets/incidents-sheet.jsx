@@ -23,13 +23,9 @@ const IncidentsSheet = ({ incidentsSheetOpen, setIncidentsSheetOpen }) => {
 
   const closeSheet = () => {
     setIncidentsSheetOpen(false);
-    const newParams = new URLSearchParams(searchParams);
-    newParams.forEach((_, key) => {
-      if (key !== "mv") {
-        newParams.delete(key);
-      }
-    });
-    setSearchParams(newParams);
+    const updatedParams = new URLSearchParams(searchParams);
+    updatedParams.delete("t");
+    setSearchParams(updatedParams);
   };
 
   const handleGoToIncidentDetails = (route) => {

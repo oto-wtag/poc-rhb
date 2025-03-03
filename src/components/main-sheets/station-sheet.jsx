@@ -17,9 +17,12 @@ import { Search, TriangleAlert, Wrench } from "lucide-react";
 const StationSheet = ({ stationsSheetOpen, setStationsSheetOpen }) => {
   const [searchParams, setSearchParams] = useSearchParams();
   const isMobile = useIsMobile();
+
   const closeSheet = () => {
     setStationsSheetOpen(false);
-    setSearchParams({});
+    const updatedParams = new URLSearchParams(searchParams);
+    updatedParams.delete("t");
+    setSearchParams(updatedParams);
   };
 
   useEffect(() => {
