@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import Map, { NavigationControl, Layer, Source } from "react-map-gl/mapbox";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { STATIONS } from "../data/stations.json";
-import { Trains } from "../data/trains.json";
+import trainsData from "../data/trains.json";
 import TrainIcon from "../assets/icons/marked-train.svg";
 import StationIcon from "../assets/icons/station.svg";
 import MarkerComponent from "./ui/marker";
 import { useSearchParams } from "react-router-dom";
-import { INCIDENTS } from "@/data/incident-data.json";
+import IncidentData from "@/data/incident-data.json";
 import IncidentMarkerIcon from "@/assets/icons/incident-marker-icon.svg";
 import StationData from "@/data/stations-data.json";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -15,9 +15,6 @@ import { useEffect } from "react";
 
 const MapComponent = () => {
   const accessToken = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN;
-  const [stations] = useState([...STATIONS]);
-  const [trains] = useState([...Trains]);
-  const [incidents] = useState([...INCIDENTS]);
   const [searchParams, setSearchParams] = useSearchParams();
   const isMobile = useIsMobile();
   const [transitData, setTransitData] = useState(null);
@@ -96,7 +93,7 @@ const MapComponent = () => {
         />
       ))}
 
-      {trains.map((train, index) => (
+      {trainsData?.Trains?.map((train, index) => (
         <MarkerComponent
           key={index}
           classProps={"cursor-pointer"}
@@ -107,7 +104,7 @@ const MapComponent = () => {
         />
       ))}
 
-      {incidents?.map((incident, index) => (
+      {IncidentData?.INCIDENTS?.map((incident, index) => (
         <MarkerComponent
           key={index}
           classProps={"cursor-pointer"}
