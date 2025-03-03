@@ -1,9 +1,9 @@
 {
   "stations": [
     {
-      "name": "Schiers",
-      "latitude": 46.9694,
-      "longitude": 9.6883,
+      "name": "Reichenburg",
+      "latitude": 47.175,
+      "longitude": 8.9703,
       "deviations": [],
       "maintenance": [],
       "incidents": [],
@@ -35,9 +35,9 @@
       ]
     },
     {
-      "name": "Landquart",
-      "latitude": 46.9667,
-      "longitude": 9.5667,
+      "name": "Flums",
+      "latitude": 47.097,
+      "longitude": 9.347,
       "deviations": [],
       "maintenance": [],
       "incidents": [],
@@ -69,9 +69,9 @@
       ]
     },
     {
-      "name": "Gotthardstrasse",
+      "name": "Cari",
       "latitude": 46.5276,
-      "longitude": 8.6063,
+      "longitude": 8.788,
       "deviations": [],
       "maintenance": [],
       "incidents": [],
@@ -241,7 +241,7 @@
     {
       "name": "San Carlo",
       "latitude": 46.5316,
-      "longitude": 8.6020,
+      "longitude": 8.602,
       "deviations": [],
       "maintenance": [],
       "incidents": [],
