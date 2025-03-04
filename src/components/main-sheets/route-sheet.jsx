@@ -34,7 +34,7 @@ const RouteSheet = ({ routesSheetOpen, setRoutesSheetOpen }) => {
 
   useEffect(() => {
     //make api calls only when the sheet is open
-    // if (stationsSheetOpen) {
+    // if (routesSheetOpen) {
     //   console.log(StationData.stations);
     // }
   }, [routesSheetOpen]);
