@@ -12,12 +12,18 @@ import IncidentMarkerIcon from "@/assets/icons/incident-marker-icon.svg";
 import StationData from "@/data/stations-data.json";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { useEffect } from "react";
+import { useQuery } from "react-query";
+import { fetchRoutes } from "@/query/routes-query";
 
 const MapComponent = () => {
   const accessToken = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN;
   const [searchParams, setSearchParams] = useSearchParams();
   const isMobile = useIsMobile();
   const [transitData, setTransitData] = useState(null);
+
+  const { data: routes, error, isLoading } = useQuery("routeData", fetchRoutes);
+
+  console.log("routes", routes);
 
   useEffect(() => {
     fetch("/hotosm_che_railways_lines_geojson.geojson")

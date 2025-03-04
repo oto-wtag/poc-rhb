@@ -14,6 +14,7 @@ import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
 import { useIsMobile } from "@/hooks/use-mobile";
 import RouteData from "@/data/routes-data.json";
+import { useEffect } from "react";
 
 const RouteSheet = ({ routesSheetOpen, setRoutesSheetOpen }) => {
   const [searchParams, setSearchParams] = useSearchParams();
