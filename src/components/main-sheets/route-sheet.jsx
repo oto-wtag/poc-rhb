@@ -32,6 +32,13 @@ const RouteSheet = ({ routesSheetOpen, setRoutesSheetOpen }) => {
     setSearchParams(currentParams);
   };
 
+  useEffect(() => {
+    //make api calls only when the sheet is open
+    // if (stationsSheetOpen) {
+    //   console.log(StationData.stations);
+    // }
+  }, [routesSheetOpen]);
+
   return (
     <Sheet open={routesSheetOpen} onOpenChange={closeSheet} modal={false}>
       <SheetContent
