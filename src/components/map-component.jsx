@@ -23,8 +23,6 @@ const MapComponent = () => {
 
   const { data: routes, error, isLoading } = useQuery("routeData", fetchRoutes);
 
-  console.log("routes", routes);
-
   useEffect(() => {
     fetch("/hotosm_che_railways_lines_geojson.geojson")
       .then((response) => response.json())
