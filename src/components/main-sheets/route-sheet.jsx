@@ -45,6 +45,7 @@ const RouteSheet = ({ routesSheetOpen, setRoutesSheetOpen }) => {
       <SheetContent
         side={isMobile ? "bottom" : "left"}
         onInteractOutside={(event) => event.preventDefault()}
+        onOpenAutoFocus={(e) => e.preventDefault()}
         className={cn(
           isMobile
             ? "bottom-16 h-[calc(100dvh-80px)] mx-2 rounded-t-xl"
